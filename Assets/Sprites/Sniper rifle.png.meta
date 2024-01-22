@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a4c444d8dffa694e9d19ee62b458f4a
+guid: e8974a7e503b9284daf7f58c5c57bbe2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -46,9 +46,9 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  alignment: 9
+  spritePivot: {x: 0.12882063, y: 0.52032363}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,127 +123,64 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noob head
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 492
-        width: 8
-        height: 8
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbe3f354353a9574fa456092908eb401
-      internalID: -261507202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob body
+      name: sniper rifle
       rect:
         serializedVersion: 2
         x: 0
-        y: 489
-        width: 8
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d364a9a93fe14b4a80923108f625b63
-      internalID: -1854756648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob arm
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 490
-        width: 3
-        height: 10
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2b2cb0cdd4ddbc42b2b111ed0843f13
-      internalID: 1621691187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob hand
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 498
-        width: 3
-        height: 2
-      alignment: 9
+        y: 14
+        width: 324
+        height: 105
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 384ca736aa4f4644d8be5f54701b31aa
-      internalID: 569942227
+      spriteID: a7cca93bf88dd1942a5b6de63c502356
+      internalID: -423118532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noob calve
+      name: sniper rifle bolt
       rect:
         serializedVersion: 2
-        x: 23
-        y: 493
-        width: 4
-        height: 7
-      alignment: 9
-      pivot: {x: 0.5, y: 0.714}
+        x: 265
+        y: 1
+        width: 58
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2142c981c36bf7a40bb508499e234c06
-      internalID: 974687103
+      spriteID: 62e1ec6c5f6177046bbb2c989d4a7821
+      internalID: -277444084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noob leg
+      name: bolt back
       rect:
         serializedVersion: 2
-        x: 19
-        y: 493
-        width: 4
-        height: 7
-      alignment: 9
-      pivot: {x: 0.5, y: 0.714}
+        x: 187
+        y: 1
+        width: 78
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2467448a956cfa54e8f926cf094cca56
-      internalID: 927868933
+      spriteID: 68c4a9b466a0e33488633f1d795ff7d5
+      internalID: -2086687081
       vertices: []
       indices: 
       edges: []
@@ -252,23 +189,16 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      111: -1750797690
-      Characters sprite_0: 288188292
-      Noob leg: 1134992215
-      noob arm: 1621691187
-      noob body: -1854756648
-      noob calve: 974687103
-      noob hand: 569942227
-      noob head: -261507202
-      noob leg: 927868933
-      sniper rifle: 3767743
+      bolt back: -2086687081
+      sniper rifle: -423118532
+      sniper rifle bolt: -277444084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
