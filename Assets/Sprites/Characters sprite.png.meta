@@ -123,10 +123,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noob head
+      name: noob normal face
       rect:
         serializedVersion: 2
-        x: 8
+        x: 19
         y: 492
         width: 8
         height: 8
@@ -168,7 +168,7 @@ TextureImporter:
       name: noob arm
       rect:
         serializedVersion: 2
-        x: 16
+        x: 8
         y: 490
         width: 3
         height: 10
@@ -189,8 +189,8 @@ TextureImporter:
       name: noob hand
       rect:
         serializedVersion: 2
-        x: 27
-        y: 498
+        x: 11
+        y: 491
         width: 3
         height: 2
       alignment: 9
@@ -210,7 +210,7 @@ TextureImporter:
       name: noob calve
       rect:
         serializedVersion: 2
-        x: 23
+        x: 15
         y: 493
         width: 4
         height: 7
@@ -231,7 +231,7 @@ TextureImporter:
       name: noob leg
       rect:
         serializedVersion: 2
-        x: 19
+        x: 11
         y: 493
         width: 4
         height: 7
@@ -248,6 +248,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: noob blinking face 1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 492
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb2163592b734e46b461711d3b8bb24
+      internalID: 1562393325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noob blinking face 2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 492
+        width: 8
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d844989f0932544a8cb8eca2dd0e0a
+      internalID: 149614416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noob aiming face
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 492
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb4b69706434794c8ebb14a91a3d094
+      internalID: -950313296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -260,14 +323,16 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       111: -1750797690
-      Characters sprite_0: 288188292
       Noob leg: 1134992215
+      noob aiming face: -950313296
       noob arm: 1621691187
+      noob blinking face 1: 288188292
+      noob blinking face 2: 149614416
       noob body: -1854756648
       noob calve: 974687103
       noob hand: 569942227
-      noob head: -261507202
       noob leg: 927868933
+      noob normal face: -261507202
       sniper rifle: 3767743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
