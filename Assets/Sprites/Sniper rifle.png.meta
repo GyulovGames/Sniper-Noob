@@ -227,6 +227,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: laser part
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 0
+        width: 100
+        height: 2
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127bd5055d7bcc54ca322fca5f75e34d
+      internalID: 1608431953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: laser pointer
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e86e9efa8e159439e56f687f812c68
+      internalID: 1520672368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -239,6 +281,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       bolt back: -2086687081
+      laser part: 1608431953
+      laser pointer: 1520672368
       rifle barrel: 1785699078
       sleeve: 1193528988
       sniper rifle: -423118532

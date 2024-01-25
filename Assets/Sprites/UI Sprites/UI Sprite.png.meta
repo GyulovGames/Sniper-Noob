@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1a4c444d8dffa694e9d19ee62b458f4a
+guid: ec1dac9196954254fab20b5146663ebb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,202 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noob normal face
+      name: close button
       rect:
         serializedVersion: 2
-        x: 19
-        y: 492
-        width: 8
-        height: 8
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbe3f354353a9574fa456092908eb401
-      internalID: -261507202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob body
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 489
-        width: 8
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7d364a9a93fe14b4a80923108f625b63
-      internalID: -1854756648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob arm
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 490
-        width: 3
-        height: 10
-      alignment: 9
-      pivot: {x: 0.5, y: 0.85}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2b2cb0cdd4ddbc42b2b111ed0843f13
-      internalID: 1621691187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob hand
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 491
-        width: 3
-        height: 2
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 384ca736aa4f4644d8be5f54701b31aa
-      internalID: 569942227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob calve
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 493
-        width: 4
-        height: 7
-      alignment: 9
-      pivot: {x: 0.5, y: 0.714}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2142c981c36bf7a40bb508499e234c06
-      internalID: 974687103
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob leg
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 493
-        width: 4
-        height: 7
-      alignment: 9
-      pivot: {x: 0.5, y: 0.714}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2467448a956cfa54e8f926cf094cca56
-      internalID: 927868933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob blinking face 1
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 492
-        width: 8
-        height: 8
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bb2163592b734e46b461711d3b8bb24
-      internalID: 1562393325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob blinking face 2
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 492
-        width: 8
-        height: 8
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38d844989f0932544a8cb8eca2dd0e0a
-      internalID: 149614416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noob aiming face
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 492
-        width: 8
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fb4b69706434794c8ebb14a91a3d094
-      internalID: -950313296
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombie body
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 472
-        width: 8
-        height: 12
+        x: 124
+        y: 392
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae21fb97df2ad5d49ab54aa861253e2c
-      internalID: -713800860
+      spriteID: 120a1d30b2052de4fac59b83827de661
+      internalID: -1942777915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie leg war 1
+      name: buttons big board
       rect:
         serializedVersion: 2
-        x: 11
-        y: 471
-        width: 4
-        height: 13
+        x: 1
+        y: 399
+        width: 122
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26d2f3895325f9549b2e62e6a68eddb8
-      internalID: -737190632
+      spriteID: 37cab64dec90f3c4d8d512589e346c2c
+      internalID: 549151937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie leg war 2
+      name: buttons small board
       rect:
         serializedVersion: 2
-        x: 15
-        y: 471
-        width: 4
-        height: 13
+        x: 1
+        y: 300
+        width: 38
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d231f9f4dc7ca7f49bdeb1151ba3f5ec
-      internalID: -247277544
+      spriteID: ab295823c6f4a5944b757e62188a744c
+      internalID: 2104970507
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie head
+      name: resume button
       rect:
         serializedVersion: 2
-        x: 19
-        y: 476
-        width: 8
-        height: 8
+        x: 178
+        y: 392
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d172caa432f6bbc4d9ced9ae3ae6ba89
-      internalID: -340060832
+      spriteID: ec312f7c0118f5a489179da566f7c16a
+      internalID: 1099803992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie arm
+      name: restart button
       rect:
         serializedVersion: 2
-        x: 8
-        y: 473
-        width: 3
-        height: 11
+        x: 205
+        y: 392
+        width: 26
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,8 +221,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a1a9d5e2c22b424f9b1d596bb860dee
-      internalID: 756634237
+      spriteID: 8601f4cdd028cae4c9947b59a61e43a4
+      internalID: 367846163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hoome button
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 392
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c892a57f383a964bb8a5f8025a41351
+      internalID: -1395845579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mag
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 226
+        width: 40
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40244b6495b2f71418dcdef0330e9832
+      internalID: -978132005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: star bullet
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 312
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d29f9126ca12c44a387ef46a55a5e1
+      internalID: -2084242247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: regular bullet
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 312
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4ffae965a9dc9428270f8564b272d1
+      internalID: -580544793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: no bullet
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 312
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6335aa5ed6f7484a9ef7f90b3d391b4
+      internalID: 825494555
       vertices: []
       indices: 
       edges: []
@@ -427,24 +343,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      111: -1750797690
-      Noob leg: 1134992215
-      noob aiming face: -950313296
-      noob arm: 1621691187
-      noob blinking face 1: 288188292
-      noob blinking face 2: 149614416
-      noob body: -1854756648
-      noob calve: 974687103
-      noob hand: 569942227
-      noob leg: 927868933
-      noob normal face: -261507202
-      sniper rifle: 3767743
-      zombie arm: 756634237
-      zombie body: -713800860
-      zombie calve: -291517824
-      zombie head: -340060832
-      zombie leg war 1: -737190632
-      zombie leg war 2: -247277544
+      buttons big board: 549151937
+      buttons small board: 2104970507
+      close button: -1942777915
+      hoome button: -1395845579
+      mag: -978132005
+      no bullet: 825494555
+      regular bullet: -580544793
+      restart button: 367846163
+      resume button: 1099803992
+      star bullet: -2084242247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

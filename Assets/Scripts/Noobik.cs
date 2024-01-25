@@ -17,6 +17,7 @@ public class Noobik : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject sleeve;
     [SerializeField] private GameObject bullet;
+    [SerializeField] private ParticleSystem muzzleEffect;
 
     private Camera mainCamera;
 
@@ -43,9 +44,10 @@ public class Noobik : MonoBehaviour
            GameObject bulletObject =  Instantiate(bullet, rifleBarrelTransform.position, rifleBarrelTransform.rotation);
            Rigidbody2D bulletRigid = bulletObject.GetComponent<Rigidbody2D>();
            // bulletRigid.AddForce(rifleBarrelTransform.right * 15, ForceMode2D.Impulse);
-            bulletRigid.velocity = rifleBarrelTransform.right * 15f;
+            bulletRigid.velocity = rifleBarrelTransform.right * 60f;
 
             audioSource.Play();
+            muzzleEffect.Play();
             animator.SetBool("One Shoot", false);
         }
     }
