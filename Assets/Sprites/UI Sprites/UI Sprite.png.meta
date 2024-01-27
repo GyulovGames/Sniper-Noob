@@ -147,10 +147,10 @@ TextureImporter:
       name: buttons big board
       rect:
         serializedVersion: 2
-        x: 1
-        y: 399
-        width: 122
-        height: 100
+        x: 339
+        y: 1
+        width: 160
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,8 +252,8 @@ TextureImporter:
       name: star shadow
       rect:
         serializedVersion: 2
-        x: 7
-        y: 127
+        x: 2
+        y: 187
         width: 110
         height: 110
       alignment: 0
@@ -336,8 +336,8 @@ TextureImporter:
       name: arrow button
       rect:
         serializedVersion: 2
-        x: 151
-        y: 392
+        x: 163
+        y: 309
         width: 26
         height: 26
       alignment: 0
@@ -357,9 +357,9 @@ TextureImporter:
       name: result menu
       rect:
         serializedVersion: 2
-        x: 251
+        x: 252
         y: 208
-        width: 168
+        width: 167
         height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -378,8 +378,8 @@ TextureImporter:
       name: sta
       rect:
         serializedVersion: 2
-        x: 124
-        y: 127
+        x: 118
+        y: 187
         width: 110
         height: 110
       alignment: 0
@@ -416,6 +416,195 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: free button
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 419
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d4e7a6a8084db45a88c7c423695b33
+      internalID: 1622767689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: middle board
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 399
+        width: 114
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7171438a764b3c43913cd8b41752833
+      internalID: -1187919253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play button
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 473
+        width: 106
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b6eed9dae2be54596a8212b3fdf15d
+      internalID: 1461259350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: levels button
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 446
+        width: 106
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473c7802cb842934d9d1dc6ec0b7b055
+      internalID: -414597843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: allGames button
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 419
+        width: 106
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1809a2a3308ba5d46b93068db2f5739e
+      internalID: 2144715563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small button
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 388
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d842d0a94efb8b340a9cf86184611f48
+      internalID: 386868989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bbb
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 5
+        width: 128
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709a1491400fa0746a7e1755782e2f54
+      internalID: 1382905590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yes
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 361
+        width: 58
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04d2a3c45889b545895cdd313ce3681
+      internalID: 57770599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: no
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 335
+        width: 58
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bd7c8d876b5ed41b2ee7c5fcb6857b
+      internalID: 117137851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -427,20 +616,29 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      allGames button: 2144715563
       arrow button: 638987426
+      bbb: 1382905590
       buttons big board: 549151937
       buttons small board: 2104970507
       close button: -1942777915
+      free button: 1622767689
       hoome button: -1395845579
+      levels button: -414597843
+      middle board: -1187919253
+      no: 117137851
       no bullet: 825494555
       pause button: 1030993422
+      play button: 1461259350
       regular bullet: -580544793
       restart button: 367846163
       result menu: 2094948789
       resume button: 1099803992
+      small button: 386868989
       sta: -570004401
       star bullet: -2084242247
       star shadow: -978132005
+      yes: 57770599
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
