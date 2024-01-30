@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AllGames
+  m_Name: Resume
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -43,7 +43,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MainMenu
+    path: PauseMenu
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -73,7 +73,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Alpha
-    path: MainMenu
+    path: PauseMenu
     classID: 225
     script: {fileID: 0}
     flags: 0
@@ -103,7 +103,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: AllGamesMenu
+    path: GameMenu
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -142,7 +142,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Alpha
-    path: AllGamesMenu
+    path: GameMenu
     classID: 225
     script: {fileID: 0}
     flags: 0
@@ -155,7 +155,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 267489803
+      path: 375244690
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -164,7 +164,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 267489803
+      path: 375244690
       attribute: 1574349066
       script: {fileID: 0}
       typeID: 225
@@ -173,7 +173,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 401436792
+      path: 1920007620
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -182,7 +182,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 401436792
+      path: 1920007620
       attribute: 1574349066
       script: {fileID: 0}
       typeID: 225
@@ -238,7 +238,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: MainMenu
+    path: PauseMenu
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -268,7 +268,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Alpha
-    path: MainMenu
+    path: PauseMenu
     classID: 225
     script: {fileID: 0}
     flags: 0
@@ -298,7 +298,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: AllGamesMenu
+    path: GameMenu
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -337,7 +337,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Alpha
-    path: AllGamesMenu
+    path: GameMenu
     classID: 225
     script: {fileID: 0}
     flags: 0

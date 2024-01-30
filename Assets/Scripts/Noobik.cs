@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
 public class Noobik : MonoBehaviour
@@ -12,6 +13,8 @@ public class Noobik : MonoBehaviour
     [SerializeField] private Transform spineTransform;
     [SerializeField] private Transform sleeveSpawnerTransform;
     [SerializeField] private Transform rifleBarrelTransform;
+    [SerializeField] private Transform leftArmTransform;
+    [SerializeField] private Transform handTransform;
     [Space(25)]
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
@@ -21,72 +24,120 @@ public class Noobik : MonoBehaviour
 
     private Camera mainCamera;
 
+    private bool paused;
+    private float fireRate = 1.15f;
+    private float nextFire = 0.0f;
+    private int bulletsNumber = 10;
+
+
     private void Start()
     {
         mainCamera = Camera.main.GetComponent<Camera>();
+
+        CanvasController.pauseEvent.AddListener(Pause);
     }
 
     private void Update()
-    {      
-        if (Input.GetMouseButton(0))
-        {
-            animator.SetBool("One Shoot", true);
-
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition.z = 10;
-
-            NeckRotation(mousePosition);
-            SholderRotation(mousePosition);
-            SpineRotation(mousePosition);
-        }
-        else if(Input.GetMouseButtonUp(0))
-        {
-           GameObject bulletObject =  Instantiate(bullet, rifleBarrelTransform.position, rifleBarrelTransform.rotation);
-           Rigidbody2D bulletRigid = bulletObject.GetComponent<Rigidbody2D>();
-           // bulletRigid.AddForce(rifleBarrelTransform.right * 15, ForceMode2D.Impulse);
-            bulletRigid.velocity = rifleBarrelTransform.right * 60f;
-
-            audioSource.Play();
-            muzzleEffect.Play();
-            animator.SetBool("One Shoot", false);
-        }
-    }
-
-    public void SpawnSleeve()
     {
-       Instantiate(sleeve, sleeveSpawnerTransform.position, sleeveSpawnerTransform.rotation);       
+        if(!paused)
+        {
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {               
+                Aiming();
+                
+                if (bulletsNumber > 0 && Time.time > nextFire)
+                {
+                    if (Input.GetMouseButton(0))
+                    {
+                        animator.SetBool("Aiming", true);
+                    }
+                    else if (Input.GetMouseButtonUp(0))
+                    {
+                        nextFire = Time.time + fireRate;
+                        bulletsNumber--;
+                        Shooot();
+                    }
+                }              
+            }
+
+            LeftArmorRotation();
+        }             
     }
 
-    private void NeckRotation(Vector3 mousePos)
-    {            
-        Vector3 objectPos = mainCamera.WorldToScreenPoint(neckTransform.position);
-        mousePos.x = mousePos.x - objectPos.x;
-        mousePos.y = mousePos.y - objectPos.y;
+    public void Aiming()
+    {
+        Vector2 mousePosition = Input.mousePosition;
+        sholderTransform.rotation = SholderRotationAngle(mousePosition);
+        neckTransform.rotation = NeckRotationAngle(mousePosition);
+        spineTransform.rotation = SpineRotationAngle(mousePosition);
+    }
 
-        float rawAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+    public void Shooot()
+    {
+        GameObject bulletObject = Instantiate(bullet, rifleBarrelTransform.position, rifleBarrelTransform.rotation); // There wil be a bullets pool.
+        Rigidbody2D bulletRigid = bulletObject.GetComponent<Rigidbody2D>();
+        bulletRigid.velocity = rifleBarrelTransform.right * 60f;
+
+        audioSource.Play();
+        muzzleEffect.Play();
+        animator.SetBool("Aiming", false);
+    }
+
+    public void SpawnSleeve() // Called from noob shooting animation.
+    {
+       Instantiate(sleeve, sleeveSpawnerTransform.position, sleeveSpawnerTransform.rotation);       // There also will be a sleevers pool.
+    }
+
+    private Quaternion NeckRotationAngle(Vector2 mousePos)
+    {
+        Vector2 neckPosition = mainCamera.WorldToScreenPoint(neckTransform.position);
+        Vector2 direction = mousePos - neckPosition;
+
+        float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float clampedAngle = Mathf.Clamp(rawAngle, -neckMaxAngle, neckMaxAngle);
-        neckTransform.rotation = Quaternion.Euler(new Vector3(0, 0, clampedAngle));
+        return  Quaternion.Euler(new Vector3(0, 0, clampedAngle));       
     }
 
-    private void SholderRotation(Vector3 mousePos)
+    private Quaternion SholderRotationAngle(Vector3 mousePos)
     {
-        Vector3 objectPos = mainCamera.WorldToScreenPoint(neckTransform.position);
-        mousePos.x = mousePos.x - objectPos.x;
-        mousePos.y = mousePos.y - objectPos.y;
+        Vector3 sholderPosition = mainCamera.WorldToScreenPoint(neckTransform.position);
+        Vector2 direction = mousePos - sholderPosition;
 
-        float rawAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float clampedAngle = Mathf.Clamp(rawAngle, -20, sholderMaxAngle);
-        sholderTransform.rotation = Quaternion.Euler(new Vector3(0, 0, clampedAngle));
+        return Quaternion.Euler(new Vector3(0, 0, clampedAngle));
     }
 
-    private void SpineRotation(Vector3 mousePos)
+    private Quaternion SpineRotationAngle(Vector3 mousePos)
     {
-        Vector3 objectPos = mainCamera.WorldToScreenPoint(neckTransform.position);
-        mousePos.x = mousePos.x - objectPos.x;
-        mousePos.y = mousePos.y - objectPos.y;
+        Vector3 spinePosition = mainCamera.WorldToScreenPoint(neckTransform.position);
+        Vector2 direction = mousePos - spinePosition;
 
-        float rawAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float clampedAngle = Mathf.Clamp(rawAngle, -spineMaxAngle, spineMaxAngle);
-        spineTransform.rotation = Quaternion.Euler(new Vector3(0, 0, clampedAngle));
+        return Quaternion.Euler(new Vector3(0, 0, clampedAngle));
+    }
+
+    private void LeftArmorRotation()
+    {
+        Vector3 leftArm = mainCamera.WorldToScreenPoint(leftArmTransform.position);
+        leftArm.z = 0f;
+        Vector3 direction = handTransform.position - leftArm;
+
+        float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        leftArmTransform.rotation = Quaternion.Euler(new Vector3(0, 0, rawAngle));
+    }
+
+
+    private void Pause()
+    {
+        if(!paused)
+        {
+            paused = true;
+        }
+        else
+        {
+            paused = false;
+        }
     }
 }
