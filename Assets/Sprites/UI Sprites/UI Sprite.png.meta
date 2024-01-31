@@ -270,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: star bullet
+      name: golden bullet
       rect:
         serializedVersion: 2
         x: 470
@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: regular bullet
+      name: sliver bullet
       rect:
         serializedVersion: 2
         x: 480
@@ -312,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: no bullet
+      name: empty bullet
       rect:
         serializedVersion: 2
         x: 490
@@ -642,23 +642,23 @@ TextureImporter:
       allGames: 2144715563
       arrow button: 638987426
       close: -1942777915
+      empty bullet: 825494555
       free button: 1622767689
+      golden bullet: -2084242247
       hoome: -1395845579
       levels: -414597843
       levels board: 549151937
       no: 117137851
-      no bullet: 825494555
       pause: 1030993422
       pause buttons board: 2104970507
       play: 1461259350
-      regular bullet: -580544793
       restart: 367846163
       results board: 2094948789
       resume: 1099803992
+      sliver bullet: -580544793
       small button: 386868989
       sounds on: 1781740578
       star: -570004401
-      star bullet: -2084242247
       star shadow: -978132005
       yes: 57770599
   mipmapLimitGroupName: 

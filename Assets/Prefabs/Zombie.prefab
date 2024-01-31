@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3483241080019987467}
   m_Layer: 3
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -944,6 +944,7 @@ GameObject:
   - component: {fileID: 6823257866198325879}
   - component: {fileID: 2917138458791236406}
   - component: {fileID: 3035934530297601743}
+  - component: {fileID: 4294950634132353018}
   m_Layer: 3
   m_Name: zombie head
   m_TagString: Untagged
@@ -1115,3 +1116,15 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -10
     m_UpperAngle: 10
+--- !u!114 &4294950634132353018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7473258395392593177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d82abbe40cc43243930786a3213cbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

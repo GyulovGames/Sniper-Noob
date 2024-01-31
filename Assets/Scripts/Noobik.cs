@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
+using UnityEngine.Events;
 
 public class Noobik : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class Noobik : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private ParticleSystem muzzleEffect;
 
+    [SerializeField] public static UnityEvent shootEvent = new UnityEvent(); 
+
     private Camera mainCamera;
 
     private bool paused;
@@ -34,7 +37,7 @@ public class Noobik : MonoBehaviour
     {
         mainCamera = Camera.main.GetComponent<Camera>();
 
-        CanvasController.pauseEvent.AddListener(Pause);
+        GameCanvas.pauseEvent.AddListener(Pause);
     }
 
     private void Update()
@@ -54,13 +57,14 @@ public class Noobik : MonoBehaviour
                     else if (Input.GetMouseButtonUp(0))
                     {
                         nextFire = Time.time + fireRate;
+                        shootEvent.Invoke();
                         bulletsNumber--;
                         Shooot();
                     }
                 }              
             }
 
-            LeftArmorRotation();
+            LeftArmRotation();
         }             
     }
 
@@ -97,35 +101,30 @@ public class Noobik : MonoBehaviour
         float clampedAngle = Mathf.Clamp(rawAngle, -neckMaxAngle, neckMaxAngle);
         return  Quaternion.Euler(new Vector3(0, 0, clampedAngle));       
     }
-
     private Quaternion SholderRotationAngle(Vector3 mousePos)
     {
-        Vector3 sholderPosition = mainCamera.WorldToScreenPoint(neckTransform.position);
+        Vector3 sholderPosition = mainCamera.WorldToScreenPoint(sholderTransform.position);
         Vector2 direction = mousePos - sholderPosition;
 
         float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float clampedAngle = Mathf.Clamp(rawAngle, -20, sholderMaxAngle);
         return Quaternion.Euler(new Vector3(0, 0, clampedAngle));
     }
-
     private Quaternion SpineRotationAngle(Vector3 mousePos)
     {
-        Vector3 spinePosition = mainCamera.WorldToScreenPoint(neckTransform.position);
+        Vector3 spinePosition = mainCamera.WorldToScreenPoint(spineTransform.position);
         Vector2 direction = mousePos - spinePosition;
 
         float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         float clampedAngle = Mathf.Clamp(rawAngle, -spineMaxAngle, spineMaxAngle);
         return Quaternion.Euler(new Vector3(0, 0, clampedAngle));
     }
-
-    private void LeftArmorRotation()
+    private void LeftArmRotation()
     {
-        Vector3 leftArm = mainCamera.WorldToScreenPoint(leftArmTransform.position);
-        leftArm.z = 0f;
-        Vector3 direction = handTransform.position - leftArm;
-
-        float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        leftArmTransform.rotation = Quaternion.Euler(new Vector3(0, 0, rawAngle));
+        Vector3 direction = handTransform.position - leftArmTransform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        leftArmTransform.rotation = rotation;
     }
 
 
