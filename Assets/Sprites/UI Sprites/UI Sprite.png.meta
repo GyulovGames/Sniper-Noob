@@ -291,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sliver bullet
+      name: regular bullet
       rect:
         serializedVersion: 2
         x: 480
@@ -652,10 +652,10 @@ TextureImporter:
       pause: 1030993422
       pause buttons board: 2104970507
       play: 1461259350
+      regular bullet: -580544793
       restart: 367846163
       results board: 2094948789
       resume: 1099803992
-      sliver bullet: -580544793
       small button: 386868989
       sounds on: 1781740578
       star: -570004401

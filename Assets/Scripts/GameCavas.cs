@@ -1,29 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameCanvas : MonoBehaviour
 {
-    [SerializeField] private int goldenShoots;
+    [SerializeField] public int goldenBullets;
+    [SerializeField] public int regularBullets;
     [Space(25)]
     [SerializeField] private Animator canvasAnimator;
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private Sprite goldenBullet;
-    [SerializeField] private Sprite sliverBullet;
-    [SerializeField] private Sprite emptyBullet;
+    [SerializeField] private Sprite goldenBulletSprite;
+    [SerializeField] private Sprite regularBulletSprite;
+    [SerializeField] private Sprite emptyBulletSprite;
     [Space(25)]
     [SerializeField] private Image[] bulletsImages;
     [SerializeField] private Image starImage1;
     [SerializeField] private Image starImage2;
     [SerializeField] private Image starImage3;
 
-    public static UnityEvent pauseEvent = new UnityEvent();
-
+    private int zombiesNumber;
     private int shootsCounter = -1;
-    private int zombiesNumber = 0;
+    private int startRegularBulletsNumber;
+    private int startGoldenBulletsNumber;
+    public static UnityEvent pauseEvent = new UnityEvent();
 
 
     private void Start()
@@ -35,60 +36,6 @@ public class GameCanvas : MonoBehaviour
         Zombie.ZombieHitEvent.AddListener(HitZombie);
     }
 
-
-    private void RefillBulletsMag()
-    {
-        int bullets = 0;
-
-        for (int i = 0; i < bulletsImages.Length; i++)
-        {
-            if (bullets != goldenShoots)
-            {
-                bulletsImages[i].sprite = goldenBullet;
-                bullets++;
-            }
-            else
-            {
-                bulletsImages[i].sprite = sliverBullet;
-            }
-        }
-    }
-
-    private void CountZombiesNumber()
-    {
-        zombiesNumber = GameObject.FindGameObjectsWithTag("Zombie").Length;
-    }
-
-    private void HitZombie()
-    {
-        zombiesNumber--;
-
-        if(zombiesNumber <= 0)
-        {
-            canvasAnimator.SetTrigger("GameResult");
-        }
-    }
-
-
-    private void Shoot()
-    {
-        shootsCounter++;
-        goldenShoots--;
-
-        bulletsImages[shootsCounter].sprite = emptyBullet;
-
-        if (goldenShoots >= 0)
-        {
-            starImage1.enabled = true;
-            starImage2.enabled = true;
-            starImage3.enabled = true;
-        }
-
-        if(shootsCounter >= 9)
-        {
-            canvasAnimator.SetTrigger("GameResult");
-        }
-    }
 
 
     public void PauseBtn()
@@ -120,10 +67,9 @@ public class GameCanvas : MonoBehaviour
     {
         audioSource.Play();
         canvasAnimator.SetTrigger("Home");
+        SceneManager.LoadScene(0);
+
     }
-
-
-
 
     public void ResultMenuResumeBtn()
     {
@@ -143,8 +89,45 @@ public class GameCanvas : MonoBehaviour
         canvasAnimator.SetTrigger("ResultHome");
     }
 
-    private void OnLevelWasLoaded(int level)
+
+
+
+    private void RefillBulletsMag()
     {
-        
+        int goldenShoots = 0;
+
+        for (int i = 0; i < bulletsImages.Length; i++)
+        {
+            if (goldenShoots != goldenBullets)
+            {
+                bulletsImages[i].sprite = goldenBulletSprite;
+                goldenShoots++;
+                startGoldenBulletsNumber++;
+            }
+            else
+            {
+                bulletsImages[i].sprite = regularBulletSprite;
+                regularBullets++; 
+                startRegularBulletsNumber++;
+            }
+        }
+    }
+
+    private void CountZombiesNumber()
+    {
+        zombiesNumber = GameObject.FindGameObjectsWithTag("Zombie").Length;
+
+    }
+
+    private void HitZombie()
+    {
+        zombiesNumber--;
+    }
+
+    private void Shoot()
+    {
+
+        shootsCounter++;
+        bulletsImages[shootsCounter].sprite = emptyBulletSprite;
     }
 }

@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem particle;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Rigidbody2D rigidBody2D;
+    [SerializeField] private CircleCollider2D circleCollider;
+    [SerializeField] private TrailRenderer bulletTrail; 
+    [SerializeField] private ParticleSystem hitParticles;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.simulated = false;
-        transform.parent = collision.gameObject.transform;
-        rb.simulated = false;
-        particle.Play();
+        switch (collision.gameObject.tag)
+        {
+            case "Zombie":
+                transform.parent = collision.gameObject.transform;
+                spriteRenderer.enabled = false;
+                circleCollider.enabled = false;
+                rigidBody2D.simulated = false;
+                bulletTrail.enabled = false;
+                hitParticles.Play();
+                break;
+        }
     }
 }
