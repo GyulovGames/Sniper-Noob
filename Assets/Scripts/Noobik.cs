@@ -23,7 +23,7 @@ public class Noobik : MonoBehaviour
     [SerializeField] private GameObject bullet;
     [SerializeField] private ParticleSystem muzzleEffect;
 
-    [SerializeField] public static UnityEvent shootEvent = new UnityEvent(); 
+    [SerializeField] public static UnityEvent ShootEvent = new UnityEvent(); 
 
     private Camera mainCamera;
 
@@ -56,8 +56,8 @@ public class Noobik : MonoBehaviour
                     }
                     else if (Input.GetMouseButtonUp(0))
                     {
+                        ShootEvent.Invoke();
                         nextFire = Time.time + fireRate;
-                        shootEvent.Invoke();
                         bulletsNumber--;
                         Shooot();
                     }

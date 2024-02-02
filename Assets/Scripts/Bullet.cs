@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     {
         switch (collision.gameObject.tag)
         {
-            case "Zombie":
+            case "ZombiePart":
                 transform.parent = collision.gameObject.transform;
                 spriteRenderer.enabled = false;
                 circleCollider.enabled = false;

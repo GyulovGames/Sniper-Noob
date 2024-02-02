@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Zombie
   - Bullet
+  - ZombiePart
   layers:
   - Default
   - TransparentFX

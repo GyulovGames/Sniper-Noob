@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 3184405910992216078}
   m_Layer: 3
   m_Name: zombie right arm
-  m_TagString: Zombie
+  m_TagString: ZombiePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +365,7 @@ GameObject:
   - component: {fileID: 2374895998492647748}
   m_Layer: 3
   m_Name: zombie body
-  m_TagString: Zombie
+  m_TagString: ZombiePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -538,7 +538,7 @@ GameObject:
   - component: {fileID: 2322155248315818861}
   m_Layer: 3
   m_Name: zombie left leg
-  m_TagString: Zombie
+  m_TagString: ZombiePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 3539573012033763343}
   m_Layer: 3
   m_Name: 'zombie left arm '
-  m_TagString: Zombie
+  m_TagString: ZombiePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 574547763896478916}
   m_Layer: 3
   m_Name: zombie right leg
-  m_TagString: Zombie
+  m_TagString: ZombiePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1132,7 +1132,7 @@ GameObject:
   - component: {fileID: 6788025693805429886}
   m_Layer: 3
   m_Name: zombie head
-  m_TagString: Zombie
+  m_TagString: ZombiePart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
