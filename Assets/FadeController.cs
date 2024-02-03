@@ -5,65 +5,54 @@ using UnityEngine;
 public class FadeController : MonoBehaviour
 {
     [SerializeField] private float fadeDuration;
-    [SerializeField] private float targetAlpha;
 
-    private float startAlpha;
-    private float appearCurrentTime;
-    private float disappearCurrentTime;
- 
 
-    public void Appear(CanvasGroup canvasGrp)
+    public void Appear( CanvasGroup appearGroup)
     {
-        if (canvasGrp.alpha == 0)
-        {
-            canvasGrp.gameObject.SetActive(true);
-        }
-
-        StartCoroutine(AppearCoroutine(canvasGrp));
-        appearCurrentTime = 0f;
+        StartCoroutine(AppearCoroutine(appearGroup));
+        appearGroup.gameObject.SetActive(true);
     }
 
-    private IEnumerator AppearCoroutine(CanvasGroup canvasGroup)
+    public IEnumerator AppearCoroutine( CanvasGroup group)
     {
-        while(appearCurrentTime < fadeDuration)
-        {
-            appearCurrentTime += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(0, 1, appearCurrentTime / fadeDuration);
-            canvasGroup.alpha = newAlpha;
+        float appearGroupAlpha = group.alpha;
+        float timePassed = 0f;
 
-            if(canvasGroup.alpha == 1)
-            {
-                StopCoroutine(AppearCoroutine(canvasGroup));
-            }
+        while (timePassed < fadeDuration)
+        {
+            float normalizedTime = timePassed / fadeDuration;
+            group.alpha = Mathf.Lerp(appearGroupAlpha, 1f, normalizedTime);
 
             yield return null;
+            timePassed += Time.deltaTime;
         }
+
+        group.alpha = 1f;
     }
 
 
 
 
-    public void Desappear(CanvasGroup canvasGrp)
+    public void Disappear(CanvasGroup disappearGroup)
     {
-        StartCoroutine(DisappearCoroutine(canvasGrp));
-        disappearCurrentTime = 0f;
+        StartCoroutine(DisappearCoroutine(disappearGroup));
     }
 
-    private IEnumerator DisappearCoroutine(CanvasGroup canvasGroup)
+    public IEnumerator DisappearCoroutine(CanvasGroup group)
     {
-        while (disappearCurrentTime < fadeDuration)
+        float disappearGroupAlpha = group.alpha;      
+        float timePassed = 0f;
+
+        while (timePassed < fadeDuration)
         {
-            disappearCurrentTime += Time.deltaTime;
-            float newAlpha = Mathf.Lerp(1, 0, disappearCurrentTime / fadeDuration);
-            canvasGroup.alpha = newAlpha;
+            float normalizedTime = timePassed / fadeDuration;
+            group.alpha = Mathf.Lerp(disappearGroupAlpha, 0f, normalizedTime);
 
-            if(canvasGroup.alpha == 0)
-            {
-                StopCoroutine(DisappearCoroutine(canvasGroup));
-                canvasGroup.gameObject.SetActive(false);                
-            }
-           
             yield return null;
+            timePassed += Time.deltaTime;
         }
+
+        group.alpha = 0f;
+        group.gameObject.SetActive(false);
     }
 }

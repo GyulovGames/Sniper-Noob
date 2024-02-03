@@ -20,9 +20,6 @@ public class GameCanvas : MonoBehaviour
     [SerializeField] private Image starImage2;
     [SerializeField] private Image starImage3;
     [Space(10)]
-    [SerializeField] private CanvasGroup mainMenu;
-    [SerializeField] private CanvasGroup allGamesMenu;
-    [SerializeField] private CanvasGroup levelsMenu;
     [SerializeField] private CanvasGroup resultMenu;
     [SerializeField] private CanvasGroup pauseMenu;
     [SerializeField] private CanvasGroup gameMenu;
@@ -42,73 +39,28 @@ public class GameCanvas : MonoBehaviour
 
     private void Start()
     {
+        UpdateOnStart();
         RefillBulletsMag();
         CountZombiesNumber();
-        UpdateLvIndexIndicator();
 
         Noobik.ShootEvent.AddListener(Shoot);
         Zombie.ZombieHitEvent.AddListener(Hit);
     }
 
-
-
-    public void StartGameBtn()
-    {
-        audioSource.Play();
-    }
-
-    public void LevelsBtn()
-    {
-        audioSource.Play();
-        fadeController.Appear(levelsMenu);
-      //  fadeController.Desappear(mainMenu);
-    }
-
-    public void CloseLevelsBtn()
-    {
-        audioSource.Play();
-      //  fadeController.Appear(mainMenu);
-        fadeController.Desappear(levelsMenu);
-    }
-    public void LoadLevelBtn(int levelIndex)
-    {
-        audioSource.Play();
-
-        SceneManager.LoadScene(levelIndex);
-    }
-
-
-    public void AllGamesBtn()
-    {
-        audioSource.Play();
-        fadeController.Desappear(mainMenu);
-        fadeController.Appear(allGamesMenu);
-    }
-
-    public void AllGamesYesBtn()
-    {
-        audioSource.Play();
-    }
-
-    public void AllGamesNoBtn()
-    {
-        audioSource.Play();
-        fadeController.Desappear(allGamesMenu);
-        fadeController.Appear(mainMenu);
-    }
-
-
     public void PauseBtn()
     {
         audioSource.Play();
         pauseEvent.Invoke();
+        fadeController.Appear(pauseMenu);
+        fadeController.Disappear(gameMenu);
     }
 
     public void ResumeBtn()
     {
         audioSource.Play();
-
         pauseEvent.Invoke();
+        fadeController.Appear(gameMenu);
+        fadeController.Disappear(pauseMenu);
     }
 
     public void RestartBtn()
@@ -117,13 +69,20 @@ public class GameCanvas : MonoBehaviour
 
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(sceneIndex);
+        fadeController.Disappear(pauseMenu);
+        fadeController.Appear(gameMenu);
+    }
+
+    public void NexLevelBtN()
+    {
+
     }
 
     public void HomeBut()
     {
         audioSource.Play();
         SceneManager.LoadScene(0);
-
+        fadeController.Disappear(pauseMenu);
     }
 
     public void ResultMenuResumeBtn()
@@ -141,12 +100,13 @@ public class GameCanvas : MonoBehaviour
         audioSource.Play();
     }
 
-
-
-    private void UpdateLvIndexIndicator()
+    private void UpdateOnStart()
     {
+        fadeController.Appear(gameMenu);
+
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         levelIndexIndicator.text = "Level:" + sceneIndex;
+
     }
 
     private void RefillBulletsMag()
@@ -208,21 +168,20 @@ public class GameCanvas : MonoBehaviour
     {
         if(zombiesNumber <= 0 || bulletsNumber <= 0)
         {
-          // Invoke("LoadResultMenu", 1.6f);
+           Invoke("LoadResultMenu", 1.6f);
         }
         else if(bulletsNumber <= 0 && zombiesNumber <= 0)
         {
-         //   Invoke("LoadResultMenu", 1.6f);
+            Invoke("LoadResultMenu", 1.6f);
         }
     }
-
-
 
     private void LoadResultMenu()
     {
         if(bulletsNumber <= 0 && zombiesNumber > 0)
         {
-           // canvasAnimator.SetTrigger("GameResult");
+            fadeController.Appear(resultMenu);
+            fadeController.Disappear(gameMenu);
         }
         else if (startRegularBulletsNumber == 0)
         {
@@ -232,7 +191,8 @@ public class GameCanvas : MonoBehaviour
                 starImage2.enabled = true;
                 starImage3.enabled = true;
 
-              //  canvasAnimator.SetTrigger("GameResult");
+                fadeController.Appear(resultMenu);
+                fadeController.Disappear(gameMenu);
             }
         }
         else if (startRegularBulletsNumber > 0)
@@ -243,20 +203,23 @@ public class GameCanvas : MonoBehaviour
                 starImage2.enabled = true;
                 starImage3.enabled = true;
 
-               // canvasAnimator.SetTrigger("GameResult");
+                fadeController.Appear(resultMenu);
+                fadeController.Disappear(gameMenu);
             }
             else if (goldenBullets == 0 && regularBullets < startRegularBulletsNumber && regularBullets >= 2)
             {
                 starImage1.enabled = true;
                 starImage2.enabled = true;
 
-              //  canvasAnimator.SetTrigger("GameResult");
+                fadeController.Appear(resultMenu);
+                fadeController.Disappear(gameMenu);
             }
             else if (goldenBullets == 0 && regularBullets < 2)
             {
                 starImage1.enabled = true;
 
-              //  canvasAnimator.SetTrigger("GameResult");
+                fadeController.Appear(resultMenu);
+                fadeController.Disappear(gameMenu);
             }
         }
     }
