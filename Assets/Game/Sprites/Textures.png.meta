@@ -543,13 +543,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: birch door
+      name: birch door part 2
       rect:
         serializedVersion: 2
         x: 48
         y: 64
         width: 16
-        height: 32
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -606,13 +606,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oak dor
+      name: oak door part 2
       rect:
         serializedVersion: 2
         x: 16
         y: 48
         width: 16
-        height: 32
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,7 +711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: birck stair
+      name: left birch stair
       rect:
         serializedVersion: 2
         x: 48
@@ -1299,11 +1299,242 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: white concrete
+      name: back birch planks
       rect:
         serializedVersion: 2
         x: 96
         y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c1c05b091e5cc54aaa646ae59f01e39
+      internalID: -1286401154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oak door part 1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae01a54dbcb8ca4b96000f1c3bf3d7e
+      internalID: 547654178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: birch door part 1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56fd3407a97de34bb1c5b5f36cfacee
+      internalID: 1934279009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back oak planks
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59ab3bd3c9ab8d4a994d417a599e6d1
+      internalID: -1816260479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right birch stair
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dff79dcd161be94f9c207784a543ea5
+      internalID: -1346958781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: left oak stair
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2636d190b5eeba6428845319493ff4b0
+      internalID: 417416823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: white concrete
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fd3cb2b29da2847822f70eba3bf833
+      internalID: -395669029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back rock
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057d151375566d948b7bb4e952c5517a
+      internalID: 1052210146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back door 1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59ab3a9edfc065478350c9b93b04a57
+      internalID: 136208720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back door 2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1db9fc9b925be4aa2a5820605ca9c1
+      internalID: -2113888920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back dirt
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 940a218bf174bdc40a23224de05322e9
+      internalID: -1692424300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back cobblestone
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
         width: 16
         height: 16
       alignment: 0
@@ -1313,8 +1544,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c1c05b091e5cc54aaa646ae59f01e39
-      internalID: -1286401154
+      spriteID: 72e56ddbe7796124abe9686efd592e59
+      internalID: 623188320
       vertices: []
       indices: 
       edges: []
@@ -1333,17 +1564,24 @@ TextureImporter:
       Blocks textures_25: 787707183
       Blocks textures_28: 1536622166
       Textures_12: 1140420491
+      back birch planks: -1286401154
+      back cobblestone: 623188320
+      back dirt: -1692424300
+      back door 1: 136208720
+      back door 2: -2113888920
+      back oak planks: -1816260479
+      back rock: 1052210146
       bed part 1: -1672058224
       bed part 2: 1806944264
       bedrock: -611037559
-      birch door: -1012951667
+      birch door part 1: 1934279009
+      birch door part 2: -1012951667
       birch fence: -369514776
       birch foliage: -1884964375
       birch log: 1442992241
       birch log top: 1756811982
       birch planks: 137617503
       birch post: 763041410
-      birck stair: -790843202
       bricks block: -1315974391
       brown mushroom: -769902418
       chest: -2122787231
@@ -1367,12 +1605,15 @@ TextureImporter:
       golden rock: 219260469
       grass dirt: -36251255
       iron block: -297637075
+      left birch stair: -790843202
+      left oak stair: 417416823
       library: 1077671305
       low grass: -1646759373
       middle grass: 147596771
       moss cobblestone: -1682657180
       moss rock bricks block: -1460787455
-      oak dor: -981556343
+      oak door part 1: 547654178
+      oak door part 2: -981556343
       oak fence: -1267596912
       oak foliage: 1725375829
       oak log: 15527422
@@ -1383,12 +1624,13 @@ TextureImporter:
       opsidian: -513539536
       red mushroom: -1657635365
       restone rock: 2046393328
+      right birch stair: -1346958781
       rock: -1669733702
       rock bricks block: -1205088240
       tall grass: 334639117
       tnt: 560344320
       torch: -179898843
-      white concrete: -1286401154
+      white concrete: -395669029
       workbench: -279214539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Laser : MonoBehaviour
@@ -8,8 +9,8 @@ public class Laser : MonoBehaviour
     [SerializeField] private Transform hitPointer;
 
 
-    
-    public float maxLaserDistance = 10f;
+
+    public float maxLaserDistance;
 
 
 
@@ -22,6 +23,11 @@ public class Laser : MonoBehaviour
             float distance = Vector2.Distance(laserTransform.position, hit.point);
             laserTransform.localScale = new Vector2(distance, laserTransform.localScale.y);
             hitPointer.position = hit.point;
+        }
+        else
+        {
+            laserTransform.localScale = new Vector2(maxLaserDistance, laserTransform.localScale.y);
+            hitPointer.localPosition = new Vector2(maxLaserDistance, laserTransform.localPosition.y);
         }
     }
 }
