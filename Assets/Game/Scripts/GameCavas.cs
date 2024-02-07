@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using YG;
 
 public class GameCanvas : MonoBehaviour
 {
@@ -74,11 +75,6 @@ public class GameCanvas : MonoBehaviour
         fadeController.Appear(smoothTransition);
     }
 
-    public void NexLevelBtN()
-    {
-
-    }
-
     public void HomeBut()
     {
         audioSource.Play();
@@ -86,19 +82,28 @@ public class GameCanvas : MonoBehaviour
         fadeController.Disappear(pauseMenu);
     }
 
+
     public void ResultMenuResumeBtn()
     {
         audioSource.Play();
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(Delay(sceneIndex + 1));
+        fadeController.Appear(smoothTransition);
     }
 
     public void ResultMenuRestartBtn() 
     {
         audioSource.Play();
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(Delay(sceneIndex));
+        fadeController.Appear(smoothTransition);
     }
 
     public void ResultMenuHomeBtn()
     {
         audioSource.Play();
+        StartCoroutine(Delay(0));
+        fadeController.Appear(smoothTransition);
     }
 
     private void UpdateOnStart()
@@ -187,9 +192,16 @@ public class GameCanvas : MonoBehaviour
 
     private void LoadResultMenu()
     {
-        if(bulletsNumber <= 0 && zombiesNumber > 0)
+
+        // private void SavingLevelData()
+
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (bulletsNumber <= 0 && zombiesNumber > 0)
         {
             fadeController.Appear(resultMenu);
+            YandexGame.savesData.completedLevelsStars[sceneIndex] = 0;
+
         }
         else if (startRegularBulletsNumber == 0)
         {
@@ -199,6 +211,8 @@ public class GameCanvas : MonoBehaviour
                 starImage2.enabled = true;
                 starImage3.enabled = true;
                 fadeController.Appear(resultMenu);
+
+                YandexGame.savesData.completedLevelsStars[sceneIndex] = 3;
             }
         }
         else if (startRegularBulletsNumber > 0)
@@ -209,18 +223,29 @@ public class GameCanvas : MonoBehaviour
                 starImage2.enabled = true;
                 starImage3.enabled = true;
                 fadeController.Appear(resultMenu);
+
+                YandexGame.savesData.completedLevelsStars[sceneIndex] = 3;
             }
             else if (goldenBullets == 0 && regularBullets < startRegularBulletsNumber && regularBullets >= 2)
             {
                 starImage1.enabled = true;
                 starImage2.enabled = true;
                 fadeController.Appear(resultMenu);
+
+                YandexGame.savesData.completedLevelsStars[sceneIndex] = 3;
+
             }
             else if (goldenBullets == 0 && regularBullets < 2)
             {
                 starImage1.enabled = true;
                 fadeController.Appear(resultMenu);
+
+                YandexGame.savesData.completedLevelsStars[sceneIndex] = 1;
+
             }
         }
+
+        YandexGame.savesData.completedLevels = sceneIndex;
+        YandexGame.SaveProgress();
     }
 }

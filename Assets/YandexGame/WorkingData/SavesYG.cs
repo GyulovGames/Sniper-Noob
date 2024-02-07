@@ -17,7 +17,10 @@ namespace YG
         public bool[] openLevels = new bool[3];
 
         // Ваши сохранения
-
+        public int[] completedLevelsStars = new int[300];
+        public int completedLevels = 1;
+        public bool sounds = true;
+        public bool music = true;
         // ...
 
         // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны

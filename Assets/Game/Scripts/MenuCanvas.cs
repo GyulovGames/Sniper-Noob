@@ -1,31 +1,119 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.U2D.Sprites;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using YG;
+using YG.Example;
 
 public class MenuCanvas : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private FadeController fadeController;
     [Space(10)]
+    [SerializeField] private Sprite soundsOnSprite;
+    [SerializeField] private Sprite soundsOffSprite;
+    [SerializeField] private Sprite musicOnSprite;
+    [SerializeField] private Sprite musicOffSprite;
+    [SerializeField] private Sprite starSprite;
+    [SerializeField] private Image soundsButtonImage;
+    [SerializeField] private Image musicButtonImage;
     [SerializeField] private CanvasGroup mainMenu;
     [SerializeField] private CanvasGroup allGamesMenu;
     [SerializeField] private CanvasGroup levelsMenu;
     [SerializeField] private CanvasGroup smoothTransition;
+    [Space(10)]
+    [SerializeField] private Button[] levelsButtons;
 
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            YandexGame.ResetSaveProgress();
+            YandexGame.SaveProgress();
+
+        }
+
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            print(YandexGame.savesData.completedLevelsStars[3]);
+        }
+    }
 
     private void Start()
     {
+        LoadCompletedLevels(YandexGame.savesData.completedLevels);
+        LoadSoundsSettings(YandexGame.savesData.sounds);
+
         fadeController.Disappear(smoothTransition);
     }
 
 
+    private void LoadCompletedLevels(int completedLevels)
+    {
+        for (int i = 0; i < completedLevels; i++)
+        {
+            levelsButtons[i].interactable = true;
+            levelsButtons[i].transition = Selectable.Transition.Animation;
+
+            int starsNumber = YandexGame.savesData.completedLevelsStars[i];
+            Transform butTransform = levelsButtons[i].transform;
+
+            switch (starsNumber)
+            {
+                case 1:
+                    butTransform.GetChild(1).GetComponent<Image>().sprite = starSprite;
+                    break;
+                case 2:
+                    butTransform.GetChild(1).GetComponent<Image>().sprite = starSprite;
+                    butTransform.GetChild(2).GetComponent<Image>().sprite = starSprite;
+                    break;
+                case 3:
+                    butTransform.GetChild(1).GetComponent<Image>().sprite = starSprite;
+                    butTransform.GetChild(2).GetComponent<Image>().sprite = starSprite;
+                    butTransform.GetChild(3).GetComponent<Image>().sprite = starSprite;
+                    break;
+            }
+        }       
+    }
+
+    private void LoadSoundsSettings(bool sounds)
+    {
+        if (sounds == true)
+        {
+            audioSource.volume = 1f;
+            soundsButtonImage.sprite = soundsOnSprite;         
+        }
+        else if(sounds == false)
+        {
+            audioSource.volume = 0f;
+            soundsButtonImage.sprite = soundsOffSprite;
+        }
+    }
+
+    
+
+    // Main menu buttons functions
     public void BtnStartGame()
     {
         audioSource.Play();
-        fadeController.Disappear(mainMenu);
+        int levelToLoad = YandexGame.savesData.completedLevels;
+
+        if(levelToLoad == 1)
+        {
+            StartCoroutine(Delay(levelToLoad));
+            fadeController.Appear(smoothTransition);
+        }
+        else if(levelToLoad > 1)
+        {
+            levelToLoad++;
+            StartCoroutine(Delay(levelToLoad));
+            fadeController.Appear(smoothTransition);
+        }
     }
 
     public void BtnOpenLevels()
@@ -35,36 +123,42 @@ public class MenuCanvas : MonoBehaviour
         fadeController.Disappear(mainMenu);
     }
 
-    public void BtnCloseLevels()
-    {
-        audioSource.Play();
-        fadeController.Appear(mainMenu);
-        fadeController.Disappear(levelsMenu);
-    }
-
-    public void BtnSounds()
-    {
-        audioSource.Play();
-    }
-
-    public void BtnMusic()
-    {
-        audioSource.Play();
-
-    }
-    public void BtnLoadLevel(int levelIndex)
-    {
-        audioSource.Play();
-        StartCoroutine(Delay(levelIndex));
-        fadeController.Appear(smoothTransition);
-    }
-
-
     public void BtnOpenAllGames()
     {
         audioSource.Play();
         fadeController.Appear(allGamesMenu);
         fadeController.Disappear(mainMenu);
+    }
+
+    public void BtnSounds()
+    {
+        bool sounds = YandexGame.savesData.sounds;
+
+        if (sounds == true)
+        {
+            audioSource.volume = 0f;
+            soundsButtonImage.sprite = soundsOffSprite;
+            YandexGame.savesData.sounds = false;
+            YandexGame.SaveProgress();
+        }
+        else if(sounds == false)
+        {
+            audioSource.Play();
+            audioSource.volume = 1f;
+            soundsButtonImage.sprite = soundsOnSprite;
+            YandexGame.savesData.sounds = true;
+            YandexGame.SaveProgress();
+        }
+    }
+
+
+
+
+    public void BtnCloseLevels()
+    {
+        audioSource.Play();
+        fadeController.Appear(mainMenu);
+        fadeController.Disappear(levelsMenu);
     }
 
     public void BtnCloseAllGames()
@@ -73,6 +167,15 @@ public class MenuCanvas : MonoBehaviour
         fadeController.Disappear(allGamesMenu);
         fadeController.Appear(mainMenu);
     }
+
+    public void BtnLoadLevel(int levelIndex)
+    {
+        audioSource.Play();
+        StartCoroutine(Delay(levelIndex));
+        fadeController.Appear(smoothTransition);
+    }
+
+
 
     private IEnumerator Delay(int levelIndex)
     {
