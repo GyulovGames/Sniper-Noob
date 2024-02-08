@@ -1,5 +1,5 @@
 {
-    "idSave": 147,
+    "idSave": 355,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -11,12 +11,12 @@
         false
     ],
     "completedLevelsStars": [
-        0,
         3,
         3,
         3,
         3,
-        0,
+        3,
+        3,
         0,
         0,
         0,
@@ -312,7 +312,8 @@
         0,
         0
     ],
-    "completedLevels": 1,
+    "completedLevels": 7,
+    "openLevelss": 1,
     "sounds": true,
     "music": true
 }

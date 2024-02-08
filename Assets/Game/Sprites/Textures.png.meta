@@ -1538,7 +1538,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1546,6 +1546,27 @@ TextureImporter:
       bones: []
       spriteID: 72e56ddbe7796124abe9686efd592e59
       internalID: 623188320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: box
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f6ef19c64cff943a3ac0fb56a6dc47
+      internalID: 695596024
       vertices: []
       indices: 
       edges: []
@@ -1582,6 +1603,7 @@ TextureImporter:
       birch log top: 1756811982
       birch planks: 137617503
       birch post: 763041410
+      box: 695596024
       bricks block: -1315974391
       brown mushroom: -769902418
       chest: -2122787231

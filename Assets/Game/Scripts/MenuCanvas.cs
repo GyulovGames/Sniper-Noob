@@ -35,12 +35,11 @@ public class MenuCanvas : MonoBehaviour
         {
             YandexGame.ResetSaveProgress();
             YandexGame.SaveProgress();
-
         }
-
-        if(Input.GetKeyDown(KeyCode.Z))
+        else if (Input.GetKeyDown(KeyCode.U))
         {
-            print(YandexGame.savesData.completedLevelsStars[3]);
+            print(YandexGame.savesData.completedLevels);
+           
         }
     }
 
@@ -48,8 +47,9 @@ public class MenuCanvas : MonoBehaviour
     {
         LoadCompletedLevels(YandexGame.savesData.completedLevels);
         LoadSoundsSettings(YandexGame.savesData.sounds);
-
+        
         fadeController.Disappear(smoothTransition);
+
     }
 
 
@@ -57,6 +57,8 @@ public class MenuCanvas : MonoBehaviour
     {
         for (int i = 0; i < completedLevels; i++)
         {
+
+
             levelsButtons[i].interactable = true;
             levelsButtons[i].transition = Selectable.Transition.Animation;
 

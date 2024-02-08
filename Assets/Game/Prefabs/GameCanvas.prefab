@@ -723,7 +723,7 @@ Animator:
   m_GameObject: {fileID: 1582049084299338289}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ad303932cb81615488667a800de27bb8, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb88f50873e8058478835f2f87d5baec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4785946176253127682}
-        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameCanvas, Assembly-CSharp
         m_MethodName: ResultMenuRestartBtn
         m_Mode: 1
         m_Arguments:
@@ -1391,7 +1391,7 @@ Animator:
   m_GameObject: {fileID: 3625014287827310839}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ad303932cb81615488667a800de27bb8, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb88f50873e8058478835f2f87d5baec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1447,7 +1447,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4785946176253127682}
-        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameCanvas, Assembly-CSharp
         m_MethodName: ResultMenuResumeBtn
         m_Mode: 1
         m_Arguments:
@@ -2047,7 +2047,7 @@ Animator:
   m_GameObject: {fileID: 5032303545982143339}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ad303932cb81615488667a800de27bb8, type: 2}
+  m_Controller: {fileID: 9100000, guid: eb88f50873e8058478835f2f87d5baec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2103,7 +2103,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4785946176253127682}
-        m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
+        m_TargetAssemblyTypeName: GameCanvas, Assembly-CSharp
         m_MethodName: ResultMenuHomeBtn
         m_Mode: 1
         m_Arguments:

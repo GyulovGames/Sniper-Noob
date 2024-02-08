@@ -12,13 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efa747916aa66674d96ea40ca8a480b2, type: 3}
   m_Name: InfoYG
   m_EditorClassIdentifier: 
-  divAdaptiveBanners:
-    banners: []
-  yandexMusic:
-    nameBanner: 
-    copyLink: 
-  TVSettings:
-    TVTestInEditor: 0
   scopes: 1
   playerPhotoSize: 0
   autoGameReadyAPI: 1
@@ -300,7 +293,7 @@ MonoBehaviour:
     consumed: 1
   metricaEnable: 0
   metricaCounterID: 0
-  debug: 1
+  debug: 0
   archivingBuild: 1
   logoImageFormat: 1
   backgroundImageFormat: 3

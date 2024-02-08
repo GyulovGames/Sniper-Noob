@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using YG;
+using UnityEditor;
 
 public class GameCanvas : MonoBehaviour
 {
@@ -50,6 +51,8 @@ public class GameCanvas : MonoBehaviour
         Zombie.ZombieHitEvent.AddListener(Hit);
     }
 
+
+
     public void PauseBtn()
     {
         audioSource.Play();
@@ -78,9 +81,11 @@ public class GameCanvas : MonoBehaviour
     public void HomeBut()
     {
         audioSource.Play();
-        SceneManager.LoadScene(0);
+        StartCoroutine(Delay(0));
         fadeController.Disappear(pauseMenu);
     }
+
+
 
 
     public void ResultMenuResumeBtn()
@@ -105,6 +110,9 @@ public class GameCanvas : MonoBehaviour
         StartCoroutine(Delay(0));
         fadeController.Appear(smoothTransition);
     }
+
+
+
 
     private void UpdateOnStart()
     {
@@ -151,6 +159,7 @@ public class GameCanvas : MonoBehaviour
 
 
 
+
     private void Hit()
     {
         zombiesNumber--;
@@ -190,18 +199,14 @@ public class GameCanvas : MonoBehaviour
         }
     }
 
+
+
     private void LoadResultMenu()
     {
-
-        // private void SavingLevelData()
-
-        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-
         if (bulletsNumber <= 0 && zombiesNumber > 0)
         {
             fadeController.Appear(resultMenu);
-            YandexGame.savesData.completedLevelsStars[sceneIndex] = 0;
-
+            SaveLevelData(0);
         }
         else if (startRegularBulletsNumber == 0)
         {
@@ -211,8 +216,7 @@ public class GameCanvas : MonoBehaviour
                 starImage2.enabled = true;
                 starImage3.enabled = true;
                 fadeController.Appear(resultMenu);
-
-                YandexGame.savesData.completedLevelsStars[sceneIndex] = 3;
+                SaveLevelData(3);
             }
         }
         else if (startRegularBulletsNumber > 0)
@@ -223,29 +227,47 @@ public class GameCanvas : MonoBehaviour
                 starImage2.enabled = true;
                 starImage3.enabled = true;
                 fadeController.Appear(resultMenu);
+                SaveLevelData(3);
 
-                YandexGame.savesData.completedLevelsStars[sceneIndex] = 3;
             }
             else if (goldenBullets == 0 && regularBullets < startRegularBulletsNumber && regularBullets >= 2)
             {
                 starImage1.enabled = true;
                 starImage2.enabled = true;
                 fadeController.Appear(resultMenu);
-
-                YandexGame.savesData.completedLevelsStars[sceneIndex] = 3;
-
+                SaveLevelData(2);
             }
             else if (goldenBullets == 0 && regularBullets < 2)
             {
                 starImage1.enabled = true;
+                SaveLevelData(1);
                 fadeController.Appear(resultMenu);
-
-                YandexGame.savesData.completedLevelsStars[sceneIndex] = 1;
-
             }
         }
+    }
 
-        YandexGame.savesData.completedLevels = sceneIndex;
-        YandexGame.SaveProgress();
+
+
+    private void SaveLevelData(int stars)
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (sceneIndex >= YandexGame.savesData.completedLevels)
+        {              
+            if(sceneIndex == 1)
+            {
+                YandexGame.savesData.completedLevelsStars[0] = stars;
+            }
+            else
+            {
+                int y = sceneIndex;
+                y--;
+                YandexGame.savesData.completedLevelsStars[y] = stars;
+            }
+      
+
+            YandexGame.savesData.completedLevels = sceneIndex + 1;
+            YandexGame.SaveProgress();
+        }
     }
 }
