@@ -19,8 +19,10 @@ public class MenuCanvas : MonoBehaviour
     [SerializeField] private Sprite musicOnSprite;
     [SerializeField] private Sprite musicOffSprite;
     [SerializeField] private Sprite starSprite;
+    [Space(20)]
     [SerializeField] private Image soundsButtonImage;
     [SerializeField] private Image musicButtonImage;
+    [Space(20)]
     [SerializeField] private CanvasGroup mainMenu;
     [SerializeField] private CanvasGroup allGamesMenu;
     [SerializeField] private CanvasGroup levelsMenu;
@@ -57,8 +59,6 @@ public class MenuCanvas : MonoBehaviour
     {
         for (int i = 0; i < completedLevels; i++)
         {
-
-
             levelsButtons[i].interactable = true;
             levelsButtons[i].transition = Selectable.Transition.Animation;
 
@@ -105,17 +105,11 @@ public class MenuCanvas : MonoBehaviour
         audioSource.Play();
         int levelToLoad = YandexGame.savesData.completedLevels;
 
-        if(levelToLoad == 1)
-        {
+
             StartCoroutine(Delay(levelToLoad));
             fadeController.Appear(smoothTransition);
-        }
-        else if(levelToLoad > 1)
-        {
-            levelToLoad++;
-            StartCoroutine(Delay(levelToLoad));
-            fadeController.Appear(smoothTransition);
-        }
+
+
     }
 
     public void BtnOpenLevels()
@@ -152,7 +146,6 @@ public class MenuCanvas : MonoBehaviour
             YandexGame.SaveProgress();
         }
     }
-
 
 
 

@@ -5057,6 +5057,8 @@ MonoBehaviour:
   circleCollider: {fileID: 4757576596801988685}
   bulletTrail: {fileID: 51243225939465107}
   hitParticles: {fileID: 7276645376662597692}
+  initialDirection: {x: 0, y: 0}
+  reflectionCount: 3
 --- !u!1 &4117751557584913295
 GameObject:
   m_ObjectHideFlags: 0

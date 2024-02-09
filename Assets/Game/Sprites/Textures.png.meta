@@ -1559,7 +1559,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1567,6 +1567,153 @@ TextureImporter:
       bones: []
       spriteID: e2f6ef19c64cff943a3ac0fb56a6dc47
       internalID: 695596024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trolley
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f18cc154c54144b977561427e0b88a
+      internalID: -2088055479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wheel
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07423a6be69b5cc42ad7832308ad70b9
+      internalID: -2008739820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piston
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1203a34de1118498c98c90ae9d3a3a
+      internalID: -598389485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stock
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384c584757ddbdc40868eb97d26e869d
+      internalID: 824745103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toggle
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 8
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5318dc937067649819cc6079dafc83
+      internalID: 994546296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 96
+        width: 2
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4bfad68f22ccd4f8702e1cdfdc9151
+      internalID: 2000940080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iron trangle
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5854b4bf2ffcee740993b43f31120de7
+      internalID: -668309560
       vertices: []
       indices: 
       edges: []
@@ -1626,7 +1773,9 @@ TextureImporter:
       glass block: 2137704710
       golden rock: 219260469
       grass dirt: -36251255
+      hand: 2000940080
       iron block: -297637075
+      iron trangle: -668309560
       left birch stair: -790843202
       left oak stair: 417416823
       library: 1077671305
@@ -1644,14 +1793,20 @@ TextureImporter:
       oak post: -1952040248
       oak stair: 1115058602
       opsidian: -513539536
+      piston: -598389485
       red mushroom: -1657635365
       restone rock: 2046393328
       right birch stair: -1346958781
       rock: -1669733702
       rock bricks block: -1205088240
+      stock: 824745103
       tall grass: 334639117
       tnt: 560344320
+      tnt Trolley: -1368873878
+      toggle: 994546296
       torch: -179898843
+      trolley: -2088055479
+      wheel: -2008739820
       white concrete: -395669029
       workbench: -279214539
   mipmapLimitGroupName: 

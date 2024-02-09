@@ -82,7 +82,7 @@ public class GameCanvas : MonoBehaviour
     {
         audioSource.Play();
         StartCoroutine(Delay(0));
-        fadeController.Disappear(pauseMenu);
+        fadeController.Appear(smoothTransition);
     }
 
 
@@ -201,6 +201,7 @@ public class GameCanvas : MonoBehaviour
 
 
 
+
     private void LoadResultMenu()
     {
         if (bulletsNumber <= 0 && zombiesNumber > 0)
@@ -246,8 +247,6 @@ public class GameCanvas : MonoBehaviour
         }
     }
 
-
-
     private void SaveLevelData(int stars)
     {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -260,14 +259,27 @@ public class GameCanvas : MonoBehaviour
             }
             else
             {
-                int y = sceneIndex;
-                y--;
-                YandexGame.savesData.completedLevelsStars[y] = stars;
+                int index = sceneIndex;
+                index--;
+                YandexGame.savesData.completedLevelsStars[index] = stars;
             }
       
-
-            YandexGame.savesData.completedLevels = sceneIndex + 1;
-            YandexGame.SaveProgress();
+            YandexGame.savesData.completedLevels = sceneIndex + 1;            
         }
+        else
+        {
+            if (sceneIndex == 1)
+            {
+                YandexGame.savesData.completedLevelsStars[0] = stars;
+            }
+            else
+            {
+                int index = sceneIndex;
+                index--;
+                YandexGame.savesData.completedLevelsStars[index] = stars;
+            }
+        }
+
+        YandexGame.SaveProgress();
     }
 }

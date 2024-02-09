@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - ZombiePart
   - GameCanvas
+  - Rebound
   layers:
   - Default
   - TransparentFX

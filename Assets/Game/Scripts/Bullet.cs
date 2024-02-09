@@ -10,6 +10,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] private TrailRenderer bulletTrail; 
     [SerializeField] private ParticleSystem hitParticles;
 
+    public Vector2 initialDirection;
+    public int reflectionCount = 3;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         switch (collision.gameObject.tag)
