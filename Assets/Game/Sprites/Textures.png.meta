@@ -1661,8 +1661,8 @@ TextureImporter:
         serializedVersion: 2
         x: 128
         y: 96
-        width: 8
-        height: 3
+        width: 9
+        height: 4
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1706,7 +1706,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1714,6 +1714,48 @@ TextureImporter:
       bones: []
       spriteID: 5854b4bf2ffcee740993b43f31120de7
       internalID: -668309560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: close door
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 4
+        height: 32
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c53e501585e0b6143830310f91f09e2f
+      internalID: 1301968674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: open door
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 32
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e6117f43cdd1a40aff6e9bbf53a54c
+      internalID: -1641048200
       vertices: []
       indices: 
       edges: []
@@ -1754,6 +1796,7 @@ TextureImporter:
       bricks block: -1315974391
       brown mushroom: -769902418
       chest: -2122787231
+      close door: 1301968674
       coal rock: -155757951
       cobblestone: 141614617
       cupper rock: -1670102124
@@ -1792,6 +1835,7 @@ TextureImporter:
       oak planks: 383924969
       oak post: -1952040248
       oak stair: 1115058602
+      open door: -1641048200
       opsidian: -513539536
       piston: -598389485
       red mushroom: -1657635365

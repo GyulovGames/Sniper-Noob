@@ -5,11 +5,17 @@ using UnityEngine;
 
 public class ZombiePart : MonoBehaviour
 {
-    [SerializeField] private  Zombie zombie;
-
+    [SerializeField] private Zombie zombie;
+    [SerializeField] private HingeJoint2D hingeJoint2D;
+ 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.gameObject.tag == "Bullet")
+
+        if (collision.collider.gameObject.tag == "Bullet")
+        {
+            zombie.Hit();
+        }
+        else if(collision.relativeVelocity.magnitude >3)
         {
             zombie.Hit();
         }

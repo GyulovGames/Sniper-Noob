@@ -15316,7 +15316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7240619806024774369, guid: ffe71f9a1fd474b4991a8c6361cc0bc9, type: 3}
       propertyPath: m_Name
-      value: Chest
+      value: Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

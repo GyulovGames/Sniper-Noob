@@ -152,6 +152,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 97d2093be15a56d4983d4e3a7b843410, type: 3}
   - {fileID: 8300000, guid: b9e3c86b3cb713749b88dceefaebc264, type: 3}
   - {fileID: 8300000, guid: 696415a7ea2854547b04c9242b9b635e, type: 3}
+  jointObject:
+  - {fileID: 7473258395392593177}
+  - {fileID: 4555737467893884316}
+  - {fileID: 3024779982030295006}
+  - {fileID: 4452895988751683723}
+  - {fileID: 5366068143888033063}
 --- !u!1 &3024779982030295006
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 618296850603496691}
+  hingeJoint2D: {fileID: 0}
 --- !u!1 &3546993457580175027
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 618296850603496691}
+  hingeJoint2D: {fileID: 0}
 --- !u!1 &4452895988751683723
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 618296850603496691}
+  hingeJoint2D: {fileID: 0}
 --- !u!61 &1192936102196013494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -918,6 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 618296850603496691}
+  hingeJoint2D: {fileID: 0}
 --- !u!1 &5366068143888033063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,6 +1081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 618296850603496691}
+  hingeJoint2D: {fileID: 0}
 --- !u!61 &5128954872241270866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1314,3 +1325,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 618296850603496691}
+  hingeJoint2D: {fileID: 0}
