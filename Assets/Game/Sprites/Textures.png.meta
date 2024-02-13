@@ -1760,6 +1760,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: black rock bricks block
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c577309bed8cdd45b188c265ba25a12
+      internalID: 990809831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: black moss rock bricks block
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17034e9ec690148479c5bf062e0c65f6
+      internalID: 675113568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1792,6 +1834,8 @@ TextureImporter:
       birch log top: 1756811982
       birch planks: 137617503
       birch post: 763041410
+      black moss rock bricks block: 675113568
+      black rock bricks block: 990809831
       box: 695596024
       bricks block: -1315974391
       brown mushroom: -769902418

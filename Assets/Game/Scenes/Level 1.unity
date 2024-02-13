@@ -14854,7 +14854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3483241080019987467, guid: bb6910f41e779204998cf3e5654d852d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.04
+      value: 1.726
       objectReference: {fileID: 0}
     - target: {fileID: 3483241080019987467, guid: bb6910f41e779204998cf3e5654d852d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14911,7 +14911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6659779311826231077, guid: 8e141ed82a2448e4a9b00cba2d6913c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.6
+      value: -4.97
       objectReference: {fileID: 0}
     - target: {fileID: 6659779311826231077, guid: 8e141ed82a2448e4a9b00cba2d6913c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15045,6 +15045,10 @@ PrefabInstance:
     - target: {fileID: 5287839241781443745, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
       propertyPath: m_Name
       value: GameCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5287839241781443745, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

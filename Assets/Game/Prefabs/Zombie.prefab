@@ -147,17 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d82abbe40cc43243930786a3213cbf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eyes: {fileID: 0}
   audioSource: {fileID: 2120130328488698394}
   zombieHitSounds:
   - {fileID: 8300000, guid: 97d2093be15a56d4983d4e3a7b843410, type: 3}
   - {fileID: 8300000, guid: b9e3c86b3cb713749b88dceefaebc264, type: 3}
   - {fileID: 8300000, guid: 696415a7ea2854547b04c9242b9b635e, type: 3}
-  jointObject:
-  - {fileID: 7473258395392593177}
-  - {fileID: 4555737467893884316}
-  - {fileID: 3024779982030295006}
-  - {fileID: 4452895988751683723}
-  - {fileID: 5366068143888033063}
 --- !u!1 &3024779982030295006
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +651,7 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 2129075198391193685}
-  m_BreakForce: 575
+  m_BreakForce: 500
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
@@ -912,8 +907,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: 290
-    m_UpperAngle: 70
+    m_LowerAngle: 350
+    m_UpperAngle: 10
 --- !u!114 &3539573012033763343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,7 +1049,7 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 2129075198391193685}
-  m_BreakForce: 575
+  m_BreakForce: 500
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0
@@ -1298,7 +1293,7 @@ HingeJoint2D:
   serializedVersion: 4
   m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 2129075198391193685}
-  m_BreakForce: 1200
+  m_BreakForce: 500
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 0

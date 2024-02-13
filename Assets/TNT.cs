@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TNT : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class TNT : MonoBehaviour
     [SerializeField] private ParticleSystem explosionParticles;
 
     private bool isCollided = false;
+
+    [SerializeField] public static UnityEvent TNTExplosion = new UnityEvent();
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -39,6 +43,8 @@ public class TNT : MonoBehaviour
 
     private void Explosion()
     {
+        TNTExplosion.Invoke();
+
         tntAnimator.enabled = false;
         rigidbody2.simulated = false;
         boxCollider.enabled = false;

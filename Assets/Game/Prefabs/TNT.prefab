@@ -106,7 +106,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -4966,7 +4966,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 560344320, guid: 758e70de0bca3d24dbcea75213797dbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5181,7 +5181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionForce: 27
   tntSensitive: 1
-  explosionDelay: 0
   explosionRadius: 3
   tntIsFireSound: {fileID: 8300000, guid: e971bd078b3778347a15df6d7305ff5d, type: 3}
   tntExplosionSound: {fileID: 8300000, guid: 8187dc917ccdda74084b079e9c1b9052, type: 3}

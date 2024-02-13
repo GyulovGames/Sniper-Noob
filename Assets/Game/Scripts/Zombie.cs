@@ -7,7 +7,6 @@ public class Zombie : MonoBehaviour
 {
     public static UnityEvent ZombieHitEvent = new UnityEvent();
 
-
     [SerializeField] private AudioSource audioSource;
     [Space(15)]
     [SerializeField] private AudioClip[] zombieHitSounds;

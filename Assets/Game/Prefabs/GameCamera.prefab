@@ -107,4 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakeDureation: 0.06
   shakeIntensity: 0.1
+  tntshakeDureation: 0.3
+  tntshakeIntensity: 0.1
   cameraTransform: {fileID: 5362719804222695033}
