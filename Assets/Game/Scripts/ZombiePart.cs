@@ -15,7 +15,7 @@ public class ZombiePart : MonoBehaviour
         {
             zombie.Hit();
         }
-        else if(collision.relativeVelocity.magnitude >3)
+        else if(collision.relativeVelocity.magnitude >4)
         {
             zombie.Hit();
         }
