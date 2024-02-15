@@ -9,6 +9,7 @@ TagManager:
   - ZombiePart
   - GameCanvas
   - Rebound
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX

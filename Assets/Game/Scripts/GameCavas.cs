@@ -29,6 +29,7 @@ public class GameCanvas : MonoBehaviour
     [SerializeField] private CanvasGroup smoothTransition;
     [Space(20)]
     [SerializeField] private Text levelIndexIndicator;
+    [SerializeField] private Text resultMenuLevelIndexIndicator;
     [Space(20)]
     [SerializeField] private Image[] bulletsCells;
 
@@ -46,6 +47,7 @@ public class GameCanvas : MonoBehaviour
         UpdateOnStart();
         RefillBulletsMag();
         CountZombiesNumber();
+        UpdateSoundsSettings();
 
         Noobik.ShootEvent.AddListener(Shoot);
         Zombie.ZombieHitEvent.AddListener(Hit);
@@ -113,13 +115,25 @@ public class GameCanvas : MonoBehaviour
 
 
 
+    private void UpdateSoundsSettings()
+    {
+        bool buttonsSounds = YandexGame.savesData.sounds;
 
+        AudioSource[] audioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+
+        if(buttonsSounds) 
+        { 
+            audioSource.volume = 1.0f;
+        }
+        else { audioSource.volume = 0.0f; }
+    }
     private void UpdateOnStart()
     {
         fadeController.Disappear(smoothTransition);
 
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
         levelIndexIndicator.text = "Level:" + sceneIndex;
+        resultMenuLevelIndexIndicator.text = "Level:" + sceneIndex;
     }
 
     private IEnumerator Delay(int levelIndex)

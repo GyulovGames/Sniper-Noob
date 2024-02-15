@@ -49,6 +49,7 @@ public class MenuCanvas : MonoBehaviour
     {
         LoadCompletedLevels(YandexGame.savesData.completedLevels);
         LoadSoundsSettings(YandexGame.savesData.sounds);
+        LoadMusicSettings(YandexGame.savesData.music);
         
         fadeController.Disappear(smoothTransition);
 
@@ -97,6 +98,22 @@ public class MenuCanvas : MonoBehaviour
         }
     }
 
+    private void LoadMusicSettings(bool music)
+    {
+        GameObject musicPlayer = GameObject.FindGameObjectWithTag("MusicPlayer");
+        AudioSource aus = musicPlayer.GetComponent<AudioSource>();
+
+        if(music == true)
+        {
+            musicButtonImage.sprite = musicOnSprite;
+        }
+        else if(music == false)
+        {
+            aus.Stop();
+            musicButtonImage.sprite = musicOffSprite;
+        }
+    }
+
     
 
     // Main menu buttons functions
@@ -108,8 +125,6 @@ public class MenuCanvas : MonoBehaviour
 
             StartCoroutine(Delay(levelToLoad));
             fadeController.Appear(smoothTransition);
-
-
     }
 
     public void BtnOpenLevels()
@@ -143,6 +158,29 @@ public class MenuCanvas : MonoBehaviour
             audioSource.volume = 1f;
             soundsButtonImage.sprite = soundsOnSprite;
             YandexGame.savesData.sounds = true;
+            YandexGame.SaveProgress();
+        }
+    }
+
+    public void BtnMusic()
+    {
+        bool music = YandexGame.savesData.music;
+        GameObject musicPlayer = GameObject.FindGameObjectWithTag("MusicPlayer");
+        AudioSource aus = musicPlayer.GetComponent<AudioSource>();
+
+
+        if (music == true)
+        {
+            aus.Pause();
+            musicButtonImage.sprite = musicOffSprite;
+            YandexGame.savesData.music = false;
+            YandexGame.SaveProgress();
+        }
+        else if (music == false)
+        {
+            aus.Play();
+            musicButtonImage.sprite=musicOnSprite;
+            YandexGame.savesData.music = true;
             YandexGame.SaveProgress();
         }
     }

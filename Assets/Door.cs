@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class Door : MonoBehaviour
 {
@@ -13,6 +14,14 @@ public class Door : MonoBehaviour
     [Space(15)]
     [SerializeField] private AudioClip doorOpenSound;
     [SerializeField] private AudioClip doorCloseSound;
+
+    private void Start()
+    {
+        if (!YandexGame.savesData.sounds)
+        {
+            audioSource.volume = 0.0f;
+        }
+    }
 
     public void OpenAndClose()
     {

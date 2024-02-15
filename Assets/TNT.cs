@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 public class TNT : MonoBehaviour
 {
@@ -23,6 +24,14 @@ public class TNT : MonoBehaviour
 
     [SerializeField] public static UnityEvent TNTExplosion = new UnityEvent();
 
+
+    private void Start()
+    {
+        if (!YandexGame.savesData.sounds)
+        {
+            audioSource.volume = 0.0f;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

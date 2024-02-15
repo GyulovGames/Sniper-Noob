@@ -2134,7 +2134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1405164407743464792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2345,6 +2345,7 @@ MonoBehaviour:
   gameMenu: {fileID: 7304328908826361358}
   smoothTransition: {fileID: 1155402412667020592}
   levelIndexIndicator: {fileID: 6787109583664291004}
+  resultMenuLevelIndexIndicator: {fileID: 5583895015884426410}
   bulletsCells:
   - {fileID: 7795971997848270595}
   - {fileID: 7807227588297117441}

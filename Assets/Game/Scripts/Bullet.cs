@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class Bullet : MonoBehaviour
 {
@@ -18,6 +19,11 @@ public class Bullet : MonoBehaviour
     private void OnEnable()
     {
         Invoke("Disable", 1f);
+
+        if (!YandexGame.savesData.sounds)
+        {
+            audioSource.volume = 0.0f;
+        }
     }
 
 

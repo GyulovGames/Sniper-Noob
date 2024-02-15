@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 using UnityEngine.Events;
+using YG;
 
 public class Noobik : MonoBehaviour
 {
@@ -38,6 +39,11 @@ public class Noobik : MonoBehaviour
         mainCamera = Camera.main.GetComponent<Camera>();
 
         GameCanvas.pauseEvent.AddListener(Pause);
+
+        if (!YandexGame.savesData.sounds)
+        {
+            audioSource.volume = 0.0f;
+        }
     }
 
     private void Update()

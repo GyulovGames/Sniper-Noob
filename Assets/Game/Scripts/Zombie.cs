@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 public class Zombie : MonoBehaviour
 {
@@ -14,6 +15,13 @@ public class Zombie : MonoBehaviour
 
     private bool isHite = false;
 
+    private void Start()
+    {
+        if (!YandexGame.savesData.sounds)
+        {
+            audioSource.volume = 0.0f;
+        }
+    }
 
     public void Hit()
     {

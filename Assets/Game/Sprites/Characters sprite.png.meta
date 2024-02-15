@@ -127,7 +127,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 492
+        y: 136
         width: 8
         height: 8
       alignment: 9
@@ -148,7 +148,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 489
+        y: 133
         width: 8
         height: 11
       alignment: 7
@@ -169,7 +169,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 8
-        y: 490
+        y: 134
         width: 3
         height: 10
       alignment: 9
@@ -190,7 +190,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 491
+        y: 135
         width: 3
         height: 2
       alignment: 3
@@ -211,7 +211,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 15
-        y: 493
+        y: 137
         width: 4
         height: 7
       alignment: 9
@@ -232,7 +232,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 493
+        y: 137
         width: 4
         height: 7
       alignment: 9
@@ -253,7 +253,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 27
-        y: 492
+        y: 136
         width: 8
         height: 8
       alignment: 9
@@ -274,7 +274,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 35
-        y: 492
+        y: 136
         width: 8
         height: 8
       alignment: 9
@@ -295,7 +295,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 43
-        y: 492
+        y: 136
         width: 8
         height: 8
       alignment: 7
@@ -316,7 +316,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 472
+        y: 116
         width: 8
         height: 12
       alignment: 7
@@ -337,9 +337,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 11
-        y: 471
+        y: 116
         width: 4
-        height: 13
+        height: 12
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -358,9 +358,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 15
-        y: 471
+        y: 116
         width: 4
-        height: 13
+        height: 12
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,7 +379,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 476
+        y: 120
         width: 8
         height: 8
       alignment: 7
@@ -400,7 +400,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 8
-        y: 473
+        y: 117
         width: 3
         height: 11
       alignment: 9
@@ -412,6 +412,111 @@ TextureImporter:
       bones: []
       spriteID: 3a1a9d5e2c22b424f9b1d596bb860dee
       internalID: 756634237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert zombie body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 8
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61912c2fcb7b49441a4ffb6aa80d4735
+      internalID: 340177877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert zombie arm
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 101
+        width: 3
+        height: 11
+      alignment: 9
+      pivot: {x: 0.5, y: 0.86}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430a86ab02a5bfd4299029f18c8eb72f
+      internalID: -311714522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert zombie leg war 1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 100
+        width: 4
+        height: 12
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32737302e217ce841b9ffbf113016c91
+      internalID: 740317733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert zombie leg war 2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 100
+        width: 4
+        height: 12
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a69226ca9d276484eb0db039147579db
+      internalID: -793914484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: desert zombie head
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 104
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4478e8c6288064dafa37cfbc620578
+      internalID: -859901942
       vertices: []
       indices: 
       edges: []
@@ -429,6 +534,11 @@ TextureImporter:
     nameFileIdTable:
       111: -1750797690
       Noob leg: 1134992215
+      desert zombie arm: -311714522
+      desert zombie body: 340177877
+      desert zombie head: -859901942
+      desert zombie leg war 1: 740317733
+      desert zombie leg war 2: -793914484
       noob aiming face: -950313296
       noob arm: 1621691187
       noob blinking face 1: 288188292
