@@ -2084,7 +2084,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2105,7 +2105,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2113,6 +2113,27 @@ TextureImporter:
       bones: []
       spriteID: 3becb2101a33aad4c925944decd84cff
       internalID: 2057950324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cobweb
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e051091caa819df43bf6cc8b4a912ddb
+      internalID: -2082412937
       vertices: []
       indices: 
       edges: []
@@ -2160,6 +2181,7 @@ TextureImporter:
       close door: 1301968674
       coal rock: -155757951
       cobblestone: 141614617
+      cobweb: -2082412937
       cupper rock: -1670102124
       diamond block: 263768541
       diamond rock: 1393024785
