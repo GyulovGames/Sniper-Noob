@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Titles_0
+      name: RU title
       rect:
         serializedVersion: 2
         x: 0
-        y: 230
-        width: 368
-        height: 192
+        y: 202
+        width: 520
+        height: 198
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,6 +139,27 @@ TextureImporter:
       bones: []
       spriteID: d98de1a9cf6b55a45be0e6b83edef180
       internalID: 907903623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EN title
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 520
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b76a474e8cfe14cba40e6bd8b3d281
+      internalID: -681203150
       vertices: []
       indices: 
       edges: []
@@ -154,7 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Titles_0: 907903623
+      EN title: -681203150
+      RU title: 907903623
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

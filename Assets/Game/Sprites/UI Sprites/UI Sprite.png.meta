@@ -584,6 +584,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: arrow cursor
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddbfcf6a95fcf24fafa72eb1a54065a
+      internalID: -2059718541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hand cursor
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2de65042cf2adc84990d9534a4ca19f3
+      internalID: -614118703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -600,10 +642,11 @@ TextureImporter:
       allGames: 2144715563
       arrow: -2142644437
       arrow button: 638987426
+      arrow cursor: -2059718541
       close: -1942777915
       empty bullet: 825494555
       golden bullet: -2084242247
-      h: -1335070903
+      hand cursor: -614118703
       hoome: -1395845579
       level: 1622767689
       levels: -414597843

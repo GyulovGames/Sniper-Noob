@@ -1,10 +1,10 @@
-using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using YG;
 using UnityEditor;
 
@@ -92,10 +92,22 @@ public class GameCanvas : MonoBehaviour
 
     public void ResultMenuResumeBtn()
     {
-        audioSource.Play();
-        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        StartCoroutine(Delay(sceneIndex + 1));
-        fadeController.Appear(smoothTransition);
+        int i = SceneManager.GetActiveScene().buildIndex;
+
+        if(i == 100)
+        {
+            audioSource.Play();
+            int randomScene = Random.Range(1, 99);
+            StartCoroutine(Delay(randomScene));
+            fadeController.Appear(smoothTransition);
+        }
+        else
+        {
+            audioSource.Play();
+            int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+            StartCoroutine(Delay(sceneIndex + 1));
+            fadeController.Appear(smoothTransition);
+        }
     }
 
     public void ResultMenuRestartBtn() 
@@ -132,8 +144,8 @@ public class GameCanvas : MonoBehaviour
         fadeController.Disappear(smoothTransition);
 
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        levelIndexIndicator.text = "Level:" + sceneIndex;
-        resultMenuLevelIndexIndicator.text = "Level:" + sceneIndex;
+        levelIndexIndicator.text   += sceneIndex;
+        resultMenuLevelIndexIndicator.text  += sceneIndex;
     }
 
     private IEnumerator Delay(int levelIndex)
@@ -264,34 +276,26 @@ public class GameCanvas : MonoBehaviour
     private void SaveLevelData(int stars)
     {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int completeLevels = YandexGame.savesData.completedLevels;
 
-        if (sceneIndex >= YandexGame.savesData.completedLevels)
-        {              
-            if(sceneIndex == 1)
-            {
-                YandexGame.savesData.completedLevelsStars[0] = stars;
-            }
-            else
-            {
-                int index = sceneIndex;
-                index--;
-                YandexGame.savesData.completedLevelsStars[index] = stars;
-            }
-      
-            YandexGame.savesData.completedLevels = sceneIndex + 1;            
+
+        if(sceneIndex >= completeLevels && sceneIndex != 100)
+        {
+            YandexGame.savesData.completedLevels = sceneIndex + 1;
+        }
+        else if(sceneIndex == 100)
+        {
+            YandexGame.savesData.completedLevels = sceneIndex;
+        }
+
+        if (sceneIndex == 1)
+        {
+            YandexGame.savesData.completedLevelsStars[0] = stars;
         }
         else
         {
-            if (sceneIndex == 1)
-            {
-                YandexGame.savesData.completedLevelsStars[0] = stars;
-            }
-            else
-            {
-                int index = sceneIndex;
-                index--;
-                YandexGame.savesData.completedLevelsStars[index] = stars;
-            }
+            sceneIndex--;
+            YandexGame.savesData.completedLevelsStars[sceneIndex] = stars;
         }
 
         YandexGame.SaveProgress();

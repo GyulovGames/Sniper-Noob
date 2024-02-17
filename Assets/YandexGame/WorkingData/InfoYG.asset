@@ -38,8 +38,8 @@ MonoBehaviour:
   quitGameParameters:
     objectName: YandexGame
     methodName: _SaveProgress
-  leaderboardEnable: 1
-  saveScoreAnonymousPlayers: 1
+  leaderboardEnable: 0
+  saveScoreAnonymousPlayers: 0
   leaderboardSimulation:
   - technoName: advanced
     entries: 'Test LeaderBoard
@@ -180,7 +180,7 @@ MonoBehaviour:
     thisPlayer:
       rank: 2
       score: 10
-  LocalizationEnable: 1
+  LocalizationEnable: 0
   callingLanguageCheck: 1
   translateMethod: 0
   domainAutoLocalization: com
@@ -294,7 +294,7 @@ MonoBehaviour:
   metricaEnable: 0
   metricaCounterID: 0
   debug: 0
-  archivingBuild: 1
+  archivingBuild: 0
   logoImageFormat: 1
   backgroundImageFormat: 3
   pixelRatioEnable: 0

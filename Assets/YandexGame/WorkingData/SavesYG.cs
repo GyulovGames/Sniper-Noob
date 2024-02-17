@@ -17,7 +17,7 @@ namespace YG
         public bool[] openLevels = new bool[3];
 
         // Ваши сохранения
-        public int[] completedLevelsStars = new int[300];
+        public int[] completedLevelsStars = new int[100];
         public int completedLevels = 1;
         public bool sounds = true;
         public bool music = true;
