@@ -383,11 +383,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1392639393894374986, guid: 80dd810d5a052fb4b9c23770b9397d7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9
+      value: -1.77
       objectReference: {fileID: 0}
     - target: {fileID: 1392639393894374986, guid: 80dd810d5a052fb4b9c23770b9397d7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.45
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1392639393894374986, guid: 80dd810d5a052fb4b9c23770b9397d7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1806,7 +1806,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1202821340}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 37655c9626f9573428fcc09c571ae6be, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6454,6 +6454,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4785946176253127682, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
+      propertyPath: goldenBullets
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5287839241781443745, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
       propertyPath: m_Name
       value: GameCanvas
@@ -6535,5 +6539,5 @@ SceneRoots:
   - {fileID: 834237410110329724}
   - {fileID: 1451699742}
   - {fileID: 715117042}
-  - {fileID: 678548257}
   - {fileID: 918936419}
+  - {fileID: 678548257}

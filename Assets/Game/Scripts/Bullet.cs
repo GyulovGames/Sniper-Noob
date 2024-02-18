@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using YG;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private int reboundCound;
-
+    [SerializeField] private int reboundCount;
+    [Space(10)]
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Rigidbody2D rigidBody2D;
     [SerializeField] private CircleCollider2D circleCollider;
@@ -14,6 +12,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] private ParticleSystem hitParticles;
     [SerializeField] private ParticleSystem reboundParticles;
     [SerializeField] private AudioSource audioSource;
+    [Space(10)]
+    [SerializeField] private AudioClip bulletReboundClip;
+    [SerializeField] private AudioClip bulletGroundHitClip;
 
 
     private void OnEnable()
@@ -41,11 +42,12 @@ public class Bullet : MonoBehaviour
                 break;
 
             case "Rebound":
-                reboundCound--;
+                reboundCount--;
+                audioSource.clip = bulletReboundClip;
                 audioSource.Play();
                 reboundParticles.Play();
 
-                if(reboundCound == 0)
+                if(reboundCount == 0)
                 {
                     transform.parent = collision.gameObject.transform;
                     spriteRenderer.enabled = false;
@@ -53,7 +55,7 @@ public class Bullet : MonoBehaviour
                     rigidBody2D.simulated = false;
                     bulletTrail.enabled = false;
 
-                    Invoke("Disable", 1f);
+                    Invoke("Disable", 1);
                 }
                 break;
 
@@ -63,6 +65,7 @@ public class Bullet : MonoBehaviour
                 circleCollider.enabled = false;
                 rigidBody2D.simulated = false;
                 bulletTrail.enabled = false;
+                audioSource.clip = bulletGroundHitClip;
                 audioSource.Play();
                 reboundParticles.Play();
                 Invoke("Disable", 1);

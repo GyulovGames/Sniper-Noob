@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 127008759}
   m_Layer: 0
   m_Name: iron block (3)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 130022431}
   m_Layer: 0
   m_Name: iron block (7)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 474388157}
   m_Layer: 0
   m_Name: iron block (5)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 700756765}
   m_Layer: 0
   m_Name: iron block (9)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 853521432}
   m_Layer: 0
   m_Name: iron block (2)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2697,7 +2697,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1202821340}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 37655c9626f9573428fcc09c571ae6be, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3868,7 +3868,7 @@ GameObject:
   - component: {fileID: 1614456883}
   m_Layer: 0
   m_Name: iron block (6)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7001,7 +7001,7 @@ GameObject:
   - component: {fileID: 2072218776}
   m_Layer: 0
   m_Name: iron block (8)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7327,7 +7327,7 @@ GameObject:
   - component: {fileID: 2134293276}
   m_Layer: 0
   m_Name: iron block (4)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7646,13 +7646,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4785946176253127682, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
+      propertyPath: goldenBullets
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5287839241781443745, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
       propertyPath: m_Name
       value: GameCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 5287839241781443745, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7734,6 +7738,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6448044912512453352, guid: 1ff9c909e53a88f4e89d2dbe9fd0defd, type: 3}
       propertyPath: Y_Limite
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448044912512453352, guid: 1ff9c909e53a88f4e89d2dbe9fd0defd, type: 3}
+      propertyPath: moveSpeed
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448044912512453352, guid: 1ff9c909e53a88f4e89d2dbe9fd0defd, type: 3}
+      propertyPath: moveDistance
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7117122083963601907, guid: 1ff9c909e53a88f4e89d2dbe9fd0defd, type: 3}

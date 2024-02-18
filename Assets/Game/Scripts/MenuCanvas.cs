@@ -1,13 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.U2D.Sprites;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using YG;
-using YG.Example;
 
 public class MenuCanvas : MonoBehaviour
 {
@@ -38,10 +33,10 @@ public class MenuCanvas : MonoBehaviour
             YandexGame.ResetSaveProgress();
             YandexGame.SaveProgress();
         }
-        else if (Input.GetKeyDown(KeyCode.U))
+        else if(Input.GetKeyDown(KeyCode.U)) 
         {
-            print(YandexGame.savesData.completedLevels);
-           
+            YandexGame.savesData.completedLevels = 99;
+            YandexGame.SaveProgress();
         }
     }
 
@@ -121,10 +116,8 @@ public class MenuCanvas : MonoBehaviour
     {
         audioSource.Play();
         int levelToLoad = YandexGame.savesData.completedLevels;
-
-
-            StartCoroutine(Delay(levelToLoad));
-            fadeController.Appear(smoothTransition);
+        StartCoroutine(Delay(levelToLoad));
+        fadeController.Appear(smoothTransition);
     }
 
     public void BtnOpenLevels()
@@ -168,7 +161,6 @@ public class MenuCanvas : MonoBehaviour
         GameObject musicPlayer = GameObject.FindGameObjectWithTag("MusicPlayer");
         AudioSource aus = musicPlayer.GetComponent<AudioSource>();
 
-
         if (music == true)
         {
             aus.Pause();
@@ -184,8 +176,6 @@ public class MenuCanvas : MonoBehaviour
             YandexGame.SaveProgress();
         }
     }
-
-
 
     public void BtnCloseLevels()
     {
@@ -207,7 +197,6 @@ public class MenuCanvas : MonoBehaviour
         StartCoroutine(Delay(levelIndex));
         fadeController.Appear(smoothTransition);
     }
-
 
 
     private IEnumerator Delay(int levelIndex)

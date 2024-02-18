@@ -84,7 +84,7 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 48
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -210,10 +210,10 @@ TextureImporter:
       name: sleeve
       rect:
         serializedVersion: 2
-        x: 139
+        x: 138
         y: 0
-        width: 33
-        height: 8
+        width: 26
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

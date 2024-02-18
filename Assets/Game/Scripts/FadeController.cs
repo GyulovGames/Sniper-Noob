@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FadeController : MonoBehaviour
@@ -29,7 +28,6 @@ public class FadeController : MonoBehaviour
 
         group.alpha = 1f;
     }
-
 
 
 

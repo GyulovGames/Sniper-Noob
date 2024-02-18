@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4975235971956658578}
   m_Layer: 0
   m_Name: iron block
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 24841236910668186}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2ddc26cb9de03ec4a8ae1a258ced68d5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 8020259820254709065}
   m_Layer: 0
   m_Name: iron block (1)
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,7 +224,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2927783592569503308}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 2ddc26cb9de03ec4a8ae1a258ced68d5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -272,7 +272,7 @@ GameObject:
   - component: {fileID: 6448044912512453352}
   m_Layer: 0
   m_Name: Moving Obstacle
-  m_TagString: Untagged
+  m_TagString: Rebound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -286,7 +286,7 @@ Transform:
   m_GameObject: {fileID: 8817151020044151113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: 0, z: -0.021346333}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

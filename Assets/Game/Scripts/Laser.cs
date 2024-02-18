@@ -1,17 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
+    [SerializeField] private float maxLaserDistance;
     [SerializeField] private Transform laserTransform;
     [SerializeField] private Transform hitPointer;
-
-
-
-    public float maxLaserDistance;
-
 
 
     private void Update()

@@ -5017,10 +5017,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1d661c4c0af66444792ab68c3b71eff8, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1.5
+  m_Volume: 0.55
+  m_Pitch: 1.25
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -5150,7 +5150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9e8d517e5b2e44cb3d33ffff9506c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reboundCound: 0
+  reboundCount: 3
   spriteRenderer: {fileID: 2257875048793369313}
   rigidBody2D: {fileID: 7486481315771428685}
   circleCollider: {fileID: 7350607981567289232}
@@ -5158,6 +5158,8 @@ MonoBehaviour:
   hitParticles: {fileID: 7276645376662597692}
   reboundParticles: {fileID: 3296257661662899212}
   audioSource: {fileID: 4363024490259105689}
+  bulletReboundClip: {fileID: 8300000, guid: 1d661c4c0af66444792ab68c3b71eff8, type: 3}
+  bulletGroundHitClip: {fileID: 8300000, guid: 96a39e3361ed6c944a44f59174501244, type: 3}
 --- !u!1 &4117751557584913295
 GameObject:
   m_ObjectHideFlags: 0

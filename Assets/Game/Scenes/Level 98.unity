@@ -4921,7 +4921,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1202821340}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 37655c9626f9573428fcc09c571ae6be, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -16205,6 +16205,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4785946176253127682, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
+      propertyPath: goldenBullets
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5287839241781443745, guid: 8b346cc03749bf143a02aaa77bdd2f04, type: 3}
       propertyPath: m_Name
       value: GameCanvas
@@ -16286,7 +16290,6 @@ SceneRoots:
   - {fileID: 1430281340}
   - {fileID: 1590652526}
   - {fileID: 900364536}
-  - {fileID: 678548257}
   - {fileID: 2124263458}
   - {fileID: 753422430}
   - {fileID: 551705894}
@@ -16294,3 +16297,4 @@ SceneRoots:
   - {fileID: 1979895870}
   - {fileID: 2133463576}
   - {fileID: 943208074}
+  - {fileID: 678548257}

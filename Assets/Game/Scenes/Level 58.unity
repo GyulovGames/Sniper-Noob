@@ -9904,7 +9904,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 1202821340}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 37655c9626f9573428fcc09c571ae6be, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -22106,6 +22106,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6448044912512453352, guid: 1ff9c909e53a88f4e89d2dbe9fd0defd, type: 3}
       propertyPath: Y_Limite
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448044912512453352, guid: 1ff9c909e53a88f4e89d2dbe9fd0defd, type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448044912512453352, guid: 1ff9c909e53a88f4e89d2dbe9fd0defd, type: 3}
+      propertyPath: moveDistance
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7117122083963601907, guid: 1ff9c909e53a88f4e89d2dbe9fd0defd, type: 3}

@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
 using UnityEngine.Events;
 using YG;
 
@@ -29,7 +28,7 @@ public class Noobik : MonoBehaviour
     private Camera mainCamera;
 
     private bool paused;
-    private float fireRate = 1.15f;
+    private float fireRate = 1.1f;
     private float nextFire = 0.0f;
     private int bulletsNumber = 10;
 
@@ -65,7 +64,7 @@ public class Noobik : MonoBehaviour
                         ShootEvent.Invoke();
                         nextFire = Time.time + fireRate;
                         bulletsNumber--;
-                        Shooot();
+                        SpawnBullet();
                     }
                 }              
             }
@@ -82,9 +81,9 @@ public class Noobik : MonoBehaviour
         spineTransform.rotation = SpineRotationAngle(mousePosition);
     }
 
-    public void Shooot()
+    public void SpawnBullet()
     {
-        GameObject bulletObject = Instantiate(bullet, rifleBarrelTransform.position, rifleBarrelTransform.rotation); // There wil be a bullets pool.
+        GameObject bulletObject = Instantiate(bullet, rifleBarrelTransform.position, rifleBarrelTransform.rotation);
         Rigidbody2D bulletRigid = bulletObject.GetComponent<Rigidbody2D>();
         bulletRigid.velocity = rifleBarrelTransform.right * 60f;
 
@@ -113,7 +112,7 @@ public class Noobik : MonoBehaviour
         Vector2 direction = mousePos - sholderPosition;
 
         float rawAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        float clampedAngle = Mathf.Clamp(rawAngle, -20, sholderMaxAngle);
+        float clampedAngle = Mathf.Clamp(rawAngle, -sholderMaxAngle, sholderMaxAngle);
         return Quaternion.Euler(new Vector3(0, 0, clampedAngle));
     }
     private Quaternion SpineRotationAngle(Vector3 mousePos)

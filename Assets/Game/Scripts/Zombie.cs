@@ -1,19 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using YG;
 
 public class Zombie : MonoBehaviour
 {
-    public static UnityEvent ZombieHitEvent = new UnityEvent();
-
     [SerializeField] private AudioSource audioSource;
-    [Space(15)]
     [SerializeField] private AudioClip[] zombieHitSounds;
 
+    public static UnityEvent ZombieHitEvent = new UnityEvent();
 
     private bool isHite = false;
+
+
 
     private void Start()
     {
