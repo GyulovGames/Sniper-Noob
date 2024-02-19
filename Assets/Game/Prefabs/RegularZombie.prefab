@@ -538,8 +538,8 @@ GameObject:
   - component: {fileID: 1395354510511741792}
   - component: {fileID: 2581620910134496072}
   - component: {fileID: 6066775732954727455}
-  - component: {fileID: 2322155248315818861}
   - component: {fileID: 1192936102196013494}
+  - component: {fileID: 2322155248315818861}
   m_Layer: 3
   m_Name: zombie left leg
   m_TagString: ZombiePart
@@ -666,21 +666,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 180
     m_UpperAngle: 65
---- !u!114 &2322155248315818861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4452895988751683723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d1b816330cf714e816c39690d577cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombieSensitive: 4
-  zombie: {fileID: 618296850603496691}
-  hingeJoint2D: {fileID: 0}
 --- !u!61 &1192936102196013494
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -726,6 +711,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.7288064}
   m_EdgeRadius: 0
+--- !u!114 &2322155248315818861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4452895988751683723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d1b816330cf714e816c39690d577cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieSensitive: 4
+  zombie: {fileID: 618296850603496691}
+  hingeJoint2D: {fileID: 0}
 --- !u!1 &4555737467893884316
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,8 +938,8 @@ GameObject:
   - component: {fileID: 2983716512642811659}
   - component: {fileID: 7129324979114436153}
   - component: {fileID: 6863169458777937457}
-  - component: {fileID: 574547763896478916}
   - component: {fileID: 5128954872241270866}
+  - component: {fileID: 574547763896478916}
   m_Layer: 3
   m_Name: zombie right leg
   m_TagString: ZombiePart
@@ -1066,21 +1066,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 110
---- !u!114 &574547763896478916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5366068143888033063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d1b816330cf714e816c39690d577cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zombieSensitive: 4
-  zombie: {fileID: 618296850603496691}
-  hingeJoint2D: {fileID: 0}
 --- !u!61 &5128954872241270866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1126,6 +1111,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25, y: 0.7289455}
   m_EdgeRadius: 0
+--- !u!114 &574547763896478916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5366068143888033063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d1b816330cf714e816c39690d577cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieSensitive: 4
+  zombie: {fileID: 618296850603496691}
+  hingeJoint2D: {fileID: 0}
 --- !u!1 &7473258395392593177
 GameObject:
   m_ObjectHideFlags: 0

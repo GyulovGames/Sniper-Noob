@@ -4,12 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Zombie
-  - Bullet
   - ZombiePart
   - GameCanvas
   - Rebound
   - MusicPlayer
+  - Zombie
   layers:
   - Default
   - TransparentFX

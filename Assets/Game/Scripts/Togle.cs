@@ -22,7 +22,7 @@ public class Togle : MonoBehaviour
             childTransform.localEulerAngles = new Vector3(0, 0, 30);
             isOpen = true;
         }
-        else
+        else if (isOpen)
         {
             childTransform.localEulerAngles = new Vector3(0, 0, -30);
             isOpen = false;

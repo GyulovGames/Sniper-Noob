@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Sleeve : MonoBehaviour
 {
+    
+
     private void OnEnable()
     {
         Vector3 forceDirection;
@@ -12,5 +14,13 @@ public class Sleeve : MonoBehaviour
         Rigidbody2D rigidBody2D = GetComponent<Rigidbody2D>();
         rigidBody2D.AddForce(forceDirection, ForceMode2D.Impulse);
         rigidBody2D.AddTorque(forceDirection.z, ForceMode2D.Impulse);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sortingOrder = 1;
+        Sleeve sleeve = GetComponent<Sleeve>();
+        sleeve.enabled = false;
     }
 }
