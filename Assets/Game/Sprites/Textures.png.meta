@@ -2076,27 +2076,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cobweb
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e051091caa819df43bf6cc8b4a912ddb
-      internalID: -2082412937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: piston
       rect:
         serializedVersion: 2
@@ -2147,7 +2126,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2155,6 +2134,48 @@ TextureImporter:
       bones: []
       spriteID: 40e70b19227f0df489ff176541715690
       internalID: 1853301466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iron block back
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8326f6c5d39fd94d80384f92331ccc5
+      internalID: -280719419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: web
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb750e3deadabc489cfe388551c83db
+      internalID: -1408954210
       vertices: []
       indices: 
       edges: []
@@ -2199,6 +2220,9 @@ TextureImporter:
       cactus middle: 921494600
       cactus top: 2080296290
       chest: -2122787231
+      chorus: -1913778518
+      chorus flower 1: -1913778518
+      chorus flower 2: -318520205
       cilinder: 1638075924
       cilinder hand: 1853301466
       close door: 1301968674
@@ -2210,6 +2234,7 @@ TextureImporter:
       diamond rock: 1393024785
       dirt: -609981741
       dry bush: -517121293
+      end stone: -870996456
       flovers cactus: -538617099
       flower 1: 1323390204
       flower 10: 1380814292
@@ -2226,6 +2251,7 @@ TextureImporter:
       grass dirt: -36251255
       hand: 2000940080
       iron block: -297637075
+      iron block back: -280719419
       iron trangle: -668309560
       left birch stair: -790843202
       left oak stair: 417416823
@@ -2269,6 +2295,7 @@ TextureImporter:
       toggle: 994546296
       torch: -179898843
       trolley: -2088055479
+      web: -1408954210
       wheel: -2008739820
       white concrete: -395669029
       workbench: -279214539

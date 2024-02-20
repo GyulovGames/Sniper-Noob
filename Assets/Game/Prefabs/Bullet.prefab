@@ -5150,7 +5150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a9e8d517e5b2e44cb3d33ffff9506c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reboundCount: 3
+  reboundCount: 5
   spriteRenderer: {fileID: 2257875048793369313}
   rigidBody2D: {fileID: 7486481315771428685}
   circleCollider: {fileID: 7350607981567289232}

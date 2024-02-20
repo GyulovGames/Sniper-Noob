@@ -521,6 +521,174 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: skeleton body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 8
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15d4bb78a75ac964f90a5f24cd64ea88
+      internalID: 951632264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton head
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 88
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf31e397f3e7b24d88c13e03a668750
+      internalID: 266661074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton arm
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 85
+        width: 3
+        height: 11
+      alignment: 9
+      pivot: {x: 0.5, y: 0.86}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b10d74e09482c7d45a4d6e4b721aed4c
+      internalID: 1262229848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skeleton leg
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 84
+        width: 4
+        height: 12
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc3cbb5df2cfc74fbf06ebf752b0c7d
+      internalID: -1770665732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enderman body
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 8
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41b4e7a58342e642b3d5139ccbb0dfb
+      internalID: -1119481363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enderman hand
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 53
+        width: 2
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: 0.95}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 044b9e1a3cb708c49b4e1caa49213de9
+      internalID: -1512153454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enderman leg
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 59
+        width: 2
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.95}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58716be457ae71145b7a5ab7ed9e9d87
+      internalID: 89297795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enderman head
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 72
+        width: 8
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9126759b51bf90428fb8803400e7267
+      internalID: 161675942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -539,6 +707,10 @@ TextureImporter:
       desert zombie head: -859901942
       desert zombie leg war 1: 740317733
       desert zombie leg war 2: -793914484
+      enderman body: -1119481363
+      enderman hand: -1512153454
+      enderman head: 161675942
+      enderman leg: 89297795
       noob aiming face: -950313296
       noob arm: 1621691187
       noob blinking face 1: 288188292
@@ -548,6 +720,10 @@ TextureImporter:
       noob hand: 569942227
       noob leg: 927868933
       noob normal face: -261507202
+      skeleton arm: 1262229848
+      skeleton body: 951632264
+      skeleton head: 266661074
+      skeleton leg: -1770665732
       sniper rifle: 3767743
       zombie arm: 756634237
       zombie body: -713800860

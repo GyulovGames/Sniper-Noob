@@ -22,6 +22,7 @@ public class Noobik : MonoBehaviour
     [SerializeField] private GameObject sleeve;
     [SerializeField] private GameObject bullet;
     [SerializeField] private ParticleSystem muzzleEffect;
+    [SerializeField] private EventSystem eventSystem;
 
     [SerializeField] public static UnityEvent ShootEvent = new UnityEvent(); 
 
@@ -37,6 +38,9 @@ public class Noobik : MonoBehaviour
     {
         mainCamera = Camera.main.GetComponent<Camera>();
 
+        GameObject canvasEventSystem = GameObject.FindGameObjectWithTag("EventSystem");
+        eventSystem = canvasEventSystem.GetComponent<EventSystem>();
+
         GameCanvas.pauseEvent.AddListener(Pause);
 
         if (!YandexGame.savesData.sounds)
@@ -49,7 +53,7 @@ public class Noobik : MonoBehaviour
     {
         if(!paused)
         {
-            if (!EventSystem.current.IsPointerOverGameObject())
+            if (!eventSystem.IsPointerOverGameObject())
             {               
                 Aiming();
                 

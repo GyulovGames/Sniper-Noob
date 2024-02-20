@@ -383,11 +383,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1392639393894374986, guid: 80dd810d5a052fb4b9c23770b9397d7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.77
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 1392639393894374986, guid: 80dd810d5a052fb4b9c23770b9397d7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -1.65
       objectReference: {fileID: 0}
     - target: {fileID: 1392639393894374986, guid: 80dd810d5a052fb4b9c23770b9397d7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -432,6 +432,10 @@ PrefabInstance:
     - target: {fileID: 5878058858198498840, guid: 80dd810d5a052fb4b9c23770b9397d7a, type: 3}
       propertyPath: m_Name
       value: TNT
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058287001646608023, guid: 80dd810d5a052fb4b9c23770b9397d7a, type: 3}
+      propertyPath: explosionRadius
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

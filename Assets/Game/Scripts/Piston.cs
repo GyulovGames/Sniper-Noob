@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class Piston : MonoBehaviour
 {
@@ -16,6 +17,12 @@ public class Piston : MonoBehaviour
 
     private void Start()
     {
+        if (!YandexGame.savesData.sounds)
+        {
+            audioSource.volume = 0.0f;
+        }
+
+
         if (stockOut)
         {
             wheelJoint2D.anchor = new Vector2(0, 0.25f);

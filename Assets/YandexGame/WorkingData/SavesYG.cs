@@ -13,20 +13,10 @@ namespace YG
 
 
         // Ваши сохранения
-        public int[] completedLevelsStars = new int[100];
+        public int[] completedLevelsStars = new int[130];
         public int completedLevels = 1;
         public bool sounds = true;
         public bool music = true;
         // ...
-
-        // Поля (сохранения) можно удалять и создавать новые. При обновлении игры сохранения ломаться не должны
-
-
-        // Вы можете выполнить какие то действия при загрузке сохранений
-        public SavesYG()
-        {
-            // Допустим, задать значения по умолчанию для отдельных элементов массива
-
-        }
     }
 }

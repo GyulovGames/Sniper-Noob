@@ -9,6 +9,8 @@ TagManager:
   - Rebound
   - MusicPlayer
   - Zombie
+  - Bullet
+  - EventSystem
   layers:
   - Default
   - TransparentFX

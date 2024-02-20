@@ -89,7 +89,7 @@ public class GameCanvas : MonoBehaviour
     {
         int i = SceneManager.GetActiveScene().buildIndex;
 
-        if(i == 100)
+        if(i == 130)
         {
             audioSource.Play();
             int randomScene = Random.Range(1, 99);
@@ -174,7 +174,6 @@ public class GameCanvas : MonoBehaviour
     private void CountZombiesNumber()
     {
         zombiesNumber = GameObject.FindGameObjectsWithTag("Zombie").Length;
-
     }
 
 
@@ -208,14 +207,14 @@ public class GameCanvas : MonoBehaviour
     {
         if (zombiesNumber <= 0 || bulletsNumber <= 0)
         {
-            Invoke("LoadResultMenu", 1.6f);
+            Invoke("LoadResultMenu", 2.4f);
             fadeController.Disappear(gameMenu);
             pauseEvent.Invoke();
 
         }
         else if(bulletsNumber <= 0 && zombiesNumber <= 0)
         {
-            Invoke("LoadResultMenu", 1.6f);
+            Invoke("LoadResultMenu", 2.4f);
             fadeController.Disappear(gameMenu);
             pauseEvent.Invoke();
         }
@@ -278,11 +277,11 @@ public class GameCanvas : MonoBehaviour
 
         if (complete)
         {
-            if (sceneIndex >= completeLevels && sceneIndex != 100)
+            if (sceneIndex >= completeLevels && sceneIndex != 130)
             {
                 YandexGame.savesData.completedLevels = sceneIndex + 1;
             }
-            else if (sceneIndex == 100)
+            else if (sceneIndex == 130)
             {
                 YandexGame.savesData.completedLevels = sceneIndex;
             }

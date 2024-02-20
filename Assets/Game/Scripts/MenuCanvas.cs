@@ -35,7 +35,7 @@ public class MenuCanvas : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.U)) 
         {
-            YandexGame.savesData.completedLevels = 99;
+            YandexGame.savesData.completedLevels = 129;
             YandexGame.SaveProgress();
         }
     }
@@ -114,10 +114,22 @@ public class MenuCanvas : MonoBehaviour
     // Main menu buttons functions
     public void BtnStartGame()
     {
-        audioSource.Play();
-        int levelToLoad = YandexGame.savesData.completedLevels;
-        StartCoroutine(Delay(levelToLoad));
-        fadeController.Appear(smoothTransition);
+        int completedLevels = YandexGame.savesData.completedLevels;
+
+        if(completedLevels != 130)
+        {
+            audioSource.Play();
+            int levelToLoad = YandexGame.savesData.completedLevels;
+            StartCoroutine(Delay(levelToLoad));
+            fadeController.Appear(smoothTransition);
+        }
+        else if (completedLevels == 130)
+        {
+            audioSource.Play();
+            int levelToLoad = Random.Range(1, 129);
+            StartCoroutine(Delay(levelToLoad));
+            fadeController.Appear(smoothTransition);
+        }
     }
 
     public void BtnOpenLevels()
