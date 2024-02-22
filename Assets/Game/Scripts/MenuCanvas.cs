@@ -26,20 +26,6 @@ public class MenuCanvas : MonoBehaviour
     [SerializeField] private Button[] levelsButtons;
 
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            YandexGame.ResetSaveProgress();
-            YandexGame.SaveProgress();
-        }
-        else if(Input.GetKeyDown(KeyCode.U)) 
-        {
-            YandexGame.savesData.completedLevels = 129;
-            YandexGame.SaveProgress();
-        }
-    }
-
     private void Start()
     {
         LoadCompletedLevels(YandexGame.savesData.completedLevels);

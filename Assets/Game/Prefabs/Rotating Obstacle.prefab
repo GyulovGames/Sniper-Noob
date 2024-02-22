@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 1
+  objectTransform: {fileID: 8846326316150875881}
 --- !u!1 &7299804706438007159
 GameObject:
   m_ObjectHideFlags: 0

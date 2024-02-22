@@ -306,7 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0516f006f52114c9a1aeb437ccd383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Xpos: -4.5
-  Ypos: -2
-  Y_Limite: 5
-  speed: 5
+  moveDistance: 1
+  moveSpeed: 1
+  objectTransform: {fileID: 7117122083963601907}
