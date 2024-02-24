@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class MainMenuLocalization : MonoBehaviour
 {
@@ -16,9 +17,9 @@ public class MainMenuLocalization : MonoBehaviour
 
     private void Start()
     {
-        string currentLanguage = Application.systemLanguage.ToString();
+        string currentLanguage = YandexGame.EnvironmentData.language;
 
-        if(currentLanguage == "Russian")
+        if(currentLanguage == "ru")
         {
             menuTitle.sprite = menuTitleRU;
             startGameBtn.text = "Начать Игру";

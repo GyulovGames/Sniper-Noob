@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class GameMenuLocalization : MonoBehaviour
 {
@@ -11,9 +12,9 @@ public class GameMenuLocalization : MonoBehaviour
 
     private void Start()
     {
-        string currentLanguage = Application.systemLanguage.ToString();
+        string currentLanguage = YandexGame.EnvironmentData.language;
 
-        if (currentLanguage == "Russian")
+        if (currentLanguage == "ru")
         {
             gameLevel.text = "׃נמגוםü:";
             pause.text = "ְֿ׃ְַ";
